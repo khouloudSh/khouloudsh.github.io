@@ -13,7 +13,7 @@ export default function ResumePage() {
           </div>
           <div className="flex items-center gap-3">
             <a
-              href="/src/files/ui_ux_khouloudShabou_en.pdf"
+              href="/files/ui_ux_khouloudShabou_en.pdf"
               download="ui_ux_khouloudShabou_en.pdf"
               className="inline-flex items-center gap-2 rounded-full border border-cyan-300 bg-white px-4 py-2 text-sm font-medium text-cyan-700 shadow-sm transition-colors hover:bg-cyan-50"
             >
@@ -21,7 +21,7 @@ export default function ResumePage() {
               Download PDF (EN)
             </a>
             <a
-              href="/src/files/ui_ux_khouloudShabou_fr.pdf"
+              href="/files/ui_ux_khouloudShabou_fr.pdf"
               download="ui_ux_khouloudShabou_fr.pdf"
               className="inline-flex items-center gap-2 rounded-full border border-cyan-300 bg-white px-4 py-2 text-sm font-medium text-cyan-700 shadow-sm transition-colors hover:bg-cyan-50"
             >

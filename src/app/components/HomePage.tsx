@@ -13,11 +13,11 @@ export default function HomePage() {
       title: "Glowy: Skincare App Design",
       description: "Complete redesign of a banking app focused on accessibility and user-friendly financial management.",
       tags: ["Mobile Design", "User Research", "Prototyping"],
-      image: "/src/images/glowy/Post.png",
+      image: "/images/glowy/Post.png",
       screenshots: [
-        "/src/images/glowy/welcome.png",
-        "/src/images/glowy/Post.png",
-        "/src/images/glowy/home.png",
+        "/images/glowy/welcome.png",
+        "/images/glowy/Post.png",
+        "/images/glowy/home.png",
       ]
     },
     {
@@ -25,12 +25,12 @@ export default function HomePage() {
       title: "Urban Escape Tours: Website Redesign",
       description: "Modern travel platform with intuitive search and booking flow, increasing conversions by 45%.",
       tags: ["Web Design", "UI/UX", "Responsive Design"],
-      image: "/src/images/urbanEscape/HomeTop.png",
-      video: "/src/images/urbanEscape/intoVideo.mp4",
+      image: "/images/urbanEscape/HomeTop.png",
+      video: "/images/urbanEscape/intoVideo.mp4",
       screenshots: [
-        "/src/images/urbanEscape/HomeTop.png",
-        "/src/images/urbanEscape/Detail.png",
-        "/src/images/urbanEscape/Packages.png",
+        "/images/urbanEscape/HomeTop.png",
+        "/images/urbanEscape/Detail.png",
+        "/images/urbanEscape/Packages.png",
       ]
     }
   ];
@@ -209,7 +209,7 @@ export default function HomePage() {
               <div className="absolute inset-[-6px] rounded-full border border-cyan-100/80" />
               <div className="relative w-80 h-80 rounded-full overflow-hidden border-4 border-white/90 shadow-[0_20px_60px_rgba(15,23,42,0.12)] ring-4 ring-cyan-100/80">
                 <ImageWithFallback
-                  src="/src/images/unnamed.jpg"
+                  src="/images/unnamed.jpg"
                   alt="Profile"
                   className="w-full h-full object-cover"
                 />

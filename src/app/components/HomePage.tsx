@@ -25,8 +25,7 @@ export default function HomePage() {
       title: "Urban Escape Tours: Website Redesign",
       description: "Modern travel platform with intuitive search and booking flow, increasing conversions by 45%.",
       tags: ["Web Design", "UI/UX", "Responsive Design"],
-      image: "/images/urbanEscape/HomeTop.png",
-      video: "/images/urbanEscape/intoVideo.mp4",
+      image: "/images/urbanEscape/Post.png",
       screenshots: [
         "/images/urbanEscape/HomeTop.png",
         "/images/urbanEscape/Detail.png",

@@ -139,6 +139,7 @@ export default function HomePage() {
             {/* Description */}
             <p className="text-center text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-12 leading-relaxed">
               UX/UI Designer with a software development background creating intuitive accessible products that solve real user problems.
+              UX/UI Designer with a software development background creating intuitive accessible products that solve real user problems.
             </p>
 
             {/* CTA Buttons */}

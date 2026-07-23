@@ -35,7 +35,7 @@ export default function HomePage() {
   ];
 
   const skills = [
-    "Figma", "HTML", "CSS", "Photoshop", "Illustrator",
+    "Figma", "Canva","HTML", "CSS", "Photoshop", "Illustrator",
     "User Research", "Wireframing", "Prototyping", "Usability Testing", "Design Systems",
     "Information Architecture", "Interaction Design", "Visual Design", "Typography", "Color Theory"
   ];

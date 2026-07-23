@@ -671,47 +671,55 @@ export default function CaseStudy() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <div className="text-center mb-16">
-            <motion.div
-              className="inline-flex items-center gap-4 mb-6"
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-            >
-              <div className="h-px w-20 bg-gradient-to-r from-transparent to-teal-300" />
-              <div className="w-20 h-20 bg-gradient-to-br from-teal-500 to-cyan-500 rounded-full flex items-center justify-center shadow-lg shadow-teal-500/30">
-                <span className="text-white font-bold text-3xl">04</span>
-              </div>
-              <div className="h-px w-20 bg-gradient-to-l from-transparent to-teal-300" />
-            </motion.div>
-            <h2 className="text-6xl font-bold text-slate-900 mb-4">Impact & Results</h2>
-            <p className="text-slate-500 uppercase text-sm tracking-widest">Measurable Success</p>
-          </div>
 
-          {/* Stats Grid */}
-          <div className="grid md:grid-cols-2 gap-6 mb-16">
-            {caseStudy.impact.split('\n').map((stat, index) => (
-              <motion.div
-                key={index}
-                className="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-2xl p-8 shadow-lg border border-teal-100 relative overflow-hidden group hover:shadow-xl transition-all"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{ y: -5 }}
-              >
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-teal-200/30 to-cyan-200/30 rounded-full blur-2xl" />
-                <div className="relative z-10">
-                  <div className="text-5xl font-bold bg-gradient-to-r from-teal-600 to-cyan-600 bg-clip-text text-transparent mb-2">
-                    {stat.match(/\d+%?/)?.[0] || '✓'}
-                  </div>
-                  <p className="text-slate-700 text-lg">
-                    {stat.replace(/[•\d%]/g, '').trim()}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+          <div className="text-center mb-16">
+    <motion.div
+      className="inline-flex items-center gap-4 mb-6"
+      initial={{ opacity: 0, scale: 0.9 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true }}
+    >
+      <div className="h-px w-20 bg-gradient-to-r from-transparent to-teal-300" />
+      <div className="w-20 h-20 bg-gradient-to-br from-teal-500 to-cyan-500 rounded-full flex items-center justify-center shadow-lg shadow-teal-500/30">
+        <span className="text-white font-bold text-3xl">04</span>
+      </div>
+      <div className="h-px w-20 bg-gradient-to-l from-transparent to-teal-300" />
+    </motion.div>
+    <h2 className="text-6xl font-bold text-slate-900 mb-4">Design Goals</h2>
+    <p className="text-slate-500 uppercase text-sm tracking-widest">What The Design Prioritizes</p>
+  </div>
+
+  <div className="grid md:grid-cols-2 gap-6 mb-16">
+    {[
+      { title: "Simplicity First", desc: "Routine reduced to clear, sequential steps with no skincare jargon." },
+      { title: "No Unnecessary Spending", desc: "Users build routines from products they already own." },
+      { title: "Personalized, Not Generic", desc: "Recommendations adapt to individual skin type and concerns." },
+      { title: "Community-Driven Trust", desc: "Real recommendations from users with similar skin, not ads." },
+    ].map((goal, index) => (
+      <motion.div
+        key={index}
+        className="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-2xl p-8 shadow-lg border border-teal-100 relative overflow-hidden group hover:shadow-xl transition-all"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: index * 0.1 }}
+        whileHover={{ y: -5 }}
+      >
+        <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-teal-200/30 to-cyan-200/30 rounded-full blur-2xl" />
+        <div className="relative z-10">
+          <h3 className="text-2xl font-bold text-slate-900 mb-2">
+            {goal.title}
+          </h3>
+          <p className="text-slate-700 text-lg leading-relaxed">
+            {goal.desc}
+          </p>
+        </div>
+      </motion.div>
+    ))}
+  </div>
+          
+
+         
 
           {/* Gallery in Section 4 - Mobile App Screens Layout */}
           <div className="mt-20">
@@ -855,9 +863,9 @@ export default function CaseStudy() {
 
               <div className="grid md:grid-cols-3 gap-8 mt-12">
                 {[
-                  { title: "User-Centered", desc: "Design principles led to measurable improvements" },
-                  { title: "Iterative Process", desc: "Testing and feedback loops were crucial" },
-                  { title: "Collaboration", desc: "Cross-team work ensured success" }
+                  { title: "User-Centered", desc: "Prioritized reducing decision fatigue over feature count." },
+                  { title: "Simplicity by Design", desc: "Every screen was tested against one question: could a beginner use this with zero explanation?" },
+                  { title: "Self-Directed Project", desc: "Designed independently to explore how to make routine-based habit apps feel approachable rather than clinical." }
                 ].map((item, index) => (
                   <motion.div
                     key={index}

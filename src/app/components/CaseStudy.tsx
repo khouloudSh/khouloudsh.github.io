@@ -6,14 +6,14 @@ import { useState, useEffect } from "react";
 
 // Mock data for case studies
 const caseStudiesData = {
-  "mobile-banking": {
+  "glowy-app": {
     title: "Glowy: Personalized Skincare, Simplified",
     category: "Mobile Design",
     hero: "/images/glowy/home.png",
     thumbnail: "/images/glowy/home.png",
-    objective: "Redesign the mobile banking experience to improve accessibility and make financial management more intuitive for users of all ages and technical abilities.",
-    problem: "The existing app had a complex navigation structure, poor visual hierarchy, and accessibility issues. Users struggled with basic tasks like transferring money and viewing account balances. Customer satisfaction scores were declining.",
-    solution: "We implemented a card-based interface with clear visual hierarchy, simplified the navigation to 4 main sections, added dark mode support, and ensured WCAG 2.1 AA compliance. The new design prioritizes frequently used features and uses progressive disclosure for complex tasks.",
+    objective: "Design a mobile app that removes the guesswork from skincare by generating a personalized routine based on each user's skin type, concerns, and goals, then guiding them through it one simple step at a time.",
+    problem: "Most skincare apps overwhelm users with generic advice, endless product catalogs, or overly technical routines that assume prior skincare knowledge. Users are left unsure what actually applies to their skin, in what order, or why. The result is that people abandon their routines within weeks, or never start one at all.",
+    solution: "I designed Glowy around a short onboarding quiz that captures skin type, concerns, and lifestyle habits, then generates a personalized morning and night routine broken into clear, ordered steps. Instead of pushing users to buy new products, Glowy lets them log what they already own and builds the routine around it, with optional product recommendations only when helpful. A community layer lets users share their routines and get real recommendations from people with similar skin types, rather than generic influencer advice.",
     impact: "• 45% reduction in task completion time\n• 38% increase in user satisfaction scores\n• 60% decrease in support tickets\n• 25% increase in daily active users",
     figmaLink: "https://www.figma.com/proto/n1J8SlmGoCNzPbiQClcHJa/Glowy?page-id=0%3A1&node-id=1-345&viewport=302%2C241%2C0.27&t=eLOV5sUp3UE1NrLR-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1%3A345",
     gallery: [

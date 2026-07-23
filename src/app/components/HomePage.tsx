@@ -9,10 +9,10 @@ import { Link } from "react-router-dom";
 export default function HomePage() {
   const projects = [
     {
-      id: "mobile-banking",
+      id: "glowy-app",
       title: "Glowy: Skincare App Design",
-      description: "Complete redesign of a banking app focused on accessibility and user-friendly financial management.",
-      tags: ["Mobile Design", "User Research", "Prototyping"],
+      description: "A personalized skincare app that analyzes your skin type and habits to generate a simple, tailored routine. No guesswork, no overwhelm.",
+      tags: ["Mobile Design", "UX Research", "Prototyping"],
       image: "/images/glowy/Post.png",
       screenshots: [
         "/images/glowy/welcome.png",
@@ -181,10 +181,9 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </section>
 
-      {/* Hero Section */}
-      <section className="pt-20 pb-12 px-6 sm:px-8 lg:px-10 bg-white">
+      </section>
+      <section className="pt-20 pb-12 px-6 sm:px-8 lg:px-10 bg-slate-100">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8">
             <div className="flex-1 text-center md:text-left">
@@ -221,12 +220,16 @@ export default function HomePage() {
       {/* About Section */}
       <section id="about" className="py-20 px-6 sm:px-8 lg:px-10 bg-gradient-to-br from-slate-50 to-slate-100">
         <div className="max-w-6xl mx-auto text-center">
-          <h3 className="text-3xl font-bold mb-6 text-slate-900">A Bit About Me</h3>
+          <h3 className="text-3xl font-bold mb-6 text-slate-900">My Design Philosophy</h3>
+          <p className="text-2xl md:text-3xl font-semibold text-teal-700 max-w-3xl mx-auto mb-10 leading-snug">
+      "Good design starts with the problem, not the interface."
+    </p>
+
           <div className="max-w-5xl mx-auto text-left md:text-center">
             <p className="text-slate-700 text-lg leading-relaxed mb-5">
               I'm a UI/UX designer with a background in software development, and that shift shapes how I work. I understand what's technically feasible, which means I can design with engineers instead of just handing off to them, and speak their language when it matters.</p>
             <p className="text-slate-700 text-lg leading-relaxed mb-5">
-              For me, good design starts with the problem, not the interface. I spend time understanding what's actually causing friction for users before I design a solution, then test and refine until it genuinely works. The polish matters, but only once the problem is truly solved.</p>
+              I spend time understanding what's actually causing friction for users before I design a solution, then test and refine until it genuinely works. The polish matters, but only once the problem is truly solved.</p>
             <p className="text-slate-700 text-lg leading-relaxed">
               My process blends user research, iterative design, and continuous testing, grounded in the problem-solving instincts I built as a developer. I love collaborating with teams to turn ideas into experiences that are functional, intuitive, and genuinely fun to use.</p>
           </div>
@@ -300,7 +303,7 @@ export default function HomePage() {
                             />
                           ))}
                         </div>
-                      ) : project.id === "mobile-banking" ? (
+                      ) : project.id === "glowy-app" ? (
                         <div className="relative w-full h-full">
                           <motion.div
                             whileHover={{ scale: 1.1 }}
@@ -356,7 +359,7 @@ export default function HomePage() {
                     </div>
 
                     <CardHeader className="relative z-10">
-                      <CardTitle className="text-slate-900 text-xl group-hover:text-teal-600 transition-colors">
+                      <CardTitle className="text-slate-900 text-xl group-hover:text-teal-700 transition-colors">
                         {project.title}
                       </CardTitle>
                       <CardDescription className="text-slate-600 leading-relaxed">
@@ -416,13 +419,13 @@ export default function HomePage() {
             I'm always open to new opportunities and collaborations. Feel free to reach out!
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
-            <Button asChild variant="outline" size="lg" className="gap-2 border-teal-600 text-teal-600 hover:bg-teal-50">
-              <a href="mailto:your.email@example.com">
+            <Button asChild variant="outline" size="lg" className="gap-2 border-teal-600 text-teal-700 hover:bg-teal-50">
+              <a href="mailto:shabou.khouloud@gmail.com">
                 <Mail className="w-5 h-5" />
                 Email
               </a>
             </Button>
-            <Button asChild variant="outline" size="lg" className="gap-2 border-[#24292F] text-[#24292F] hover:bg-[#24292F]/10">
+            <Button asChild variant="outline" size="lg" className="gap-2 border-indigo-600 text-indigo-600 hover:bg-indigo-50">
               <Link to="/resume">
                 <Eye className="w-5 h-5" />
                 Resume

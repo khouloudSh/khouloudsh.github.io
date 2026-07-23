@@ -5,7 +5,7 @@ import { ArrowLeft, Mail, Linkedin, Download } from "lucide-react";
 export default function ResumePage() {
   return (
     <div className="min-h-screen bg-[#f7f9fc] text-slate-700">
-      <header className="fixed top-0 w-full bg-[#f7f9fc]/95 border-b border-slate-200 shadow-sm shadow-slate-200/60 z-50 backdrop-blur">
+      <header className="sticky top-0 w-full bg-[#f7f9fc]/95 border-b border-slate-200 shadow-sm shadow-slate-200/60 z-50 backdrop-blur">
          <div className="max-w-6xl mx-auto px-6 py-4 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <div>
             <p className="text-sm uppercase tracking-[0.3em] text-cyan-600 font-semibold">Resume</p>
@@ -38,7 +38,7 @@ export default function ResumePage() {
         </div>
       </header>
 
-      <main className="max-w-6xl mx-auto px-6 pt-28 pb-16">
+      <main className="max-w-6xl mx-auto px-6 pt-10 pb-16">
         <section className="mb-10 rounded-[28px] border border-cyan-300 bg-[#f8fcff] p-8 shadow-md shadow-slate-200/80 backdrop-blur-sm">
           <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
             <div>

@@ -1,7 +1,7 @@
 import { Button } from "./ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { Badge } from "./ui/badge";
-import { Mail, Linkedin, ExternalLink, ArrowDown, Eye } from "lucide-react";
+import { Mail, Linkedin, Eye } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
@@ -316,33 +316,22 @@ export default function HomePage() {
 
                           <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-                          <motion.div
-                            className="absolute top-4 right-4 bg-gradient-to-r from-teal-600 to-cyan-600 text-white rounded-full p-3 shadow-lg"
-                            whileHover={{ rotate: 360, scale: 1.2 }}
-                            transition={{ duration: 0.5 }}
-                          >
-                            <ExternalLink className="w-5 h-5" />
-                          </motion.div>
                         </div>
                       ) : project.id === "urbanEscapeTour" ? (
                         <div className="relative w-full h-full overflow-hidden bg-slate-900">
-                          <video
-                            className="h-full w-full object-cover"
-                            src={project.video}
-                            autoPlay
-                            loop
-                            muted
-                            playsInline
-                            preload="metadata"
-                          />
-                          <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-slate-900/20" />
                           <motion.div
-                            className="absolute top-4 right-4 bg-gradient-to-r from-teal-600 to-cyan-600 text-white rounded-full p-3 shadow-lg z-10"
-                            whileHover={{ rotate: 360, scale: 1.2 }}
-                            transition={{ duration: 0.5 }}
+                            whileHover={{ scale: 1.1 }}
+                            transition={{ duration: 0.6 }}
+                            className="w-full h-full"
                           >
-                            <ExternalLink className="w-5 h-5" />
+                            <ImageWithFallback
+                              src={project.image}
+                              alt={project.title}
+                              className="w-full h-full object-contain bg-white"
+                            />
                           </motion.div>
+                          <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-slate-900/20" />
+       
                         </div>
                       ) : (
                         // Single Image Fallback
@@ -361,16 +350,6 @@ export default function HomePage() {
 
                           {/* Gradient Overlay */}
                           <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-
-                          {/* Floating Icon */}
-                          <motion.div
-                            className="absolute top-4 right-4 bg-gradient-to-r from-teal-600 to-cyan-600 text-white rounded-full p-3 shadow-lg"
-                            whileHover={{ rotate: 360, scale: 1.2 }}
-                            transition={{ duration: 0.5 }}
-                          >
-                            <ExternalLink className="w-5 h-5" />
-                          </motion.div>
-
 
                         </>
                       )}

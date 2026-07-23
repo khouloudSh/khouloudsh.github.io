@@ -6,7 +6,7 @@ export default function ResumePage() {
   return (
     <div className="min-h-screen bg-[#f7f9fc] text-slate-700">
       <header className="fixed top-0 w-full bg-[#f7f9fc]/95 border-b border-slate-200 shadow-sm shadow-slate-200/60 z-50 backdrop-blur">
-        <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+         <div className="max-w-6xl mx-auto px-6 py-4 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <div>
             <p className="text-sm uppercase tracking-[0.3em] text-cyan-600 font-semibold">Resume</p>
             <h1 className="text-2xl font-semibold mt-1 text-slate-900">Khouloud Shabou</h1>

@@ -24,6 +24,11 @@ const caseStudiesData = {
       "/images/glowy/q4.png",
       "/images/glowy/aiSkinAnalyze.png",
       "/images/glowy/analyseComplete.png",
+    ],
+    keyTakeaways: [
+      { title: "User-Centered", desc: "Prioritized reducing decision fatigue over feature count." },
+      { title: "Simplicity by Design", desc: "Every screen was tested against one question: could a beginner use this with zero explanation?" },
+      { title: "Self-Directed Project", desc: "Designed independently to explore how to make routine-based habit apps feel approachable rather than clinical." }
     ]
   },
   "urbanEscapeTour": {
@@ -31,9 +36,9 @@ const caseStudiesData = {
     category: "Web Design",
     hero: "/images/urbanEscape/HomeTop.png",
     thumbnail: "/images/urbanEscape/HomeTop.png",
-    objective: "Create an intuitive travel booking platform that simplifies the process of discovering and booking travel experiences while providing users with comprehensive information and competitive pricing.",
-    problem: "Existing travel platforms overwhelmed users with too many options and complex filtering systems. The booking process was lengthy and confusing, leading to high abandonment rates and poor user satisfaction.",
-    solution: "Designed a clean, modern interface with smart filtering, beautiful imagery, and a streamlined booking flow. Implemented interactive maps, real-time pricing, and personalized recommendations to enhance the user experience.",
+    objective: "Redesign an existing travel booking website to make discovering and comparing tour packages faster and less overwhelming, while making trip details easy to actually read.",
+    problem: "The original site displayed all tour packages in one long, unfiltered list that visitors had to scroll through manually with no way to narrow results by destination, duration, or trip type. The trip detail pages were just as difficult: information was presented in dense, uninterrupted paragraphs that made it hard to find key details like pricing, itinerary, or what was actually included.",
+    solution: "I redesigned the packages page around a filtering system that lets users narrow results by destination, trip length, and category, so they can find relevant tours in seconds instead of scrolling through everything. On the detail pages, I broke the dense paragraphs into scannable sections with clear headings, so users can quickly find what they're looking for instead of reading a wall of text.",
     impact: "• 45% increase in booking completion rate\n• 60% reduction in search time\n• 35% increase in user engagement\n• 50% improvement in mobile conversions",
     figmaLink: "https://www.figma.com/proto/Kxa7mrRxFXEO86OjVSilWE/Untitled?page-id=0%3A1&node-id=31-859&viewport=1213%2C1044%2C0.36&t=HB48ZdeHs2i676Ub-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=31%3A859",
     gallery: [
@@ -42,6 +47,11 @@ const caseStudiesData = {
       "/images/urbanEscape/Packages.png",
       "/images/urbanEscape/Contact.png",
       "/images/urbanEscape/faq.png",
+    ],
+     keyTakeaways: [
+      { title: "Information Architecture", desc: "Reorganizing content mattered more than restyling it." },
+      { title: "Scannability", desc: "Breaking up dense text made trip details actually usable." },
+      { title: "Self-Directed Project", desc: "Redesigned independently to practice solving real, observed UX problems." }
     ]
   },
   "healthcare": {
@@ -691,10 +701,10 @@ export default function CaseStudy() {
 
   <div className="grid md:grid-cols-2 gap-6 mb-16">
     {[
-      { title: "Simplicity First", desc: "Routine reduced to clear, sequential steps with no skincare jargon." },
-      { title: "No Unnecessary Spending", desc: "Users build routines from products they already own." },
-      { title: "Personalized, Not Generic", desc: "Recommendations adapt to individual skin type and concerns." },
-      { title: "Community-Driven Trust", desc: "Real recommendations from users with similar skin, not ads." },
+      { title: "Faster Discovery", desc: "Filters for destination, trip length, and category replace endless scrolling." },
+      { title: "Organized by Design", desc: "Packages are grouped and structured, not just dumped on the page." },
+      { title: "Readable Details", desc: "Long, dense paragraphs rewritten into clear, scannable sections." },
+      { title: "Practice Redesign", desc: "An independent redesign exercise based on a real site's UX shortcomings." },
     ].map((goal, index) => (
       <motion.div
         key={index}
@@ -862,11 +872,7 @@ export default function CaseStudy() {
               </motion.div>
 
               <div className="grid md:grid-cols-3 gap-8 mt-12">
-                {[
-                  { title: "User-Centered", desc: "Prioritized reducing decision fatigue over feature count." },
-                  { title: "Simplicity by Design", desc: "Every screen was tested against one question: could a beginner use this with zero explanation?" },
-                  { title: "Self-Directed Project", desc: "Designed independently to explore how to make routine-based habit apps feel approachable rather than clinical." }
-                ].map((item, index) => (
+                {caseStudy.keyTakeaways.map((item, index) => (
                   <motion.div
                     key={index}
                     className="bg-white rounded-2xl p-6 border border-slate-200 shadow-md hover:shadow-lg transition-all"

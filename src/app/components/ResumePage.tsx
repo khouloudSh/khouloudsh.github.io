@@ -143,7 +143,7 @@ export default function ResumePage() {
                       <p className="text-lg font-semibold text-slate-900">UI/UX Design</p>
                       <p className="text-sm text-slate-500">Concordia, Montréal</p>
                     </div>
-                    <p className="text-sm text-cyan-700 font-medium whitespace-nowrap">Jan 2026 – Mars 2026</p>
+                    <p className="text-sm text-cyan-700 font-medium whitespace-nowrap">Jan 2026 – March 2026</p>
                   </div>
                   <p className="mt-2">Covered foundational UI/UX principles, including user research, wireframing, prototyping, and usability best practices using Figma.</p>
                 </div>
@@ -203,31 +203,19 @@ export default function ResumePage() {
                 </div>
                 <div>
                   <p className="font-semibold text-slate-900 mb-2">Design Tools</p>
-                  <p>Figma, Adobe Photoshop, canvas</p>
+                  <p>Figma, Adobe Photoshop, Canvas</p>
                 </div>
                 <div>
                   <p className="font-semibold text-slate-900 mb-2">Front-End</p>
-                  <p>HTML5, CSS3, JavaScript, TypeScript, React, jQuery, XML, SVG, GridLayout (CSS)</p>
-                </div>
-                <div>
-                  <p className="font-semibold text-slate-900 mb-2">Back-End / Languages</p>
-                  <p>Java, JavaScript, React, Node.js, PHP, C/C#/C++, .NET, Oracle ADF</p>
-                </div>
-                <div>
-                  <p className="font-semibold text-slate-900 mb-2">Databases</p>
-                  <p>T-SQL, MySQL, SQLite</p>
+                  <p>HTML5, CSS3, JavaScript, TypeScript, React</p>
                 </div>
                 <div>
                   <p className="font-semibold text-slate-900 mb-2">Collaboration</p>
                   <p>Agile/Scrum, Cross-functional teamwork, Design-to-code handoff, Jira, Confluence</p>
                 </div>
                 <div>
-                  <p className="font-semibold text-slate-900 mb-2">Testing & QA</p>
-                  <p>Selenium, JUnit, Postman, Automated & Integration Testing, CI/CD pipelines</p>
-                </div>
-                <div>
-                  <p className="font-semibold text-slate-900 mb-2">DevOps & Tools</p>
-                  <p>Git, Docker, Jenkins, Maven</p>
+                  <p className="font-semibold text-slate-900 mb-2">Research & Process</p>
+                  <p>User interviews, Usability testing, Persona development, User flows, A/B testing</p>
                 </div>
               </div>
             </div>

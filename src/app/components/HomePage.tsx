@@ -23,8 +23,8 @@ export default function HomePage() {
     {
       id: "urbanEscapeTour",
       title: "Urban Escape Tours: Website Redesign",
-      description: "Modern travel platform with intuitive search and booking flow, increasing conversions by 45%.",
-      tags: ["Web Design", "UI/UX", "Responsive Design"],
+      description: "A redesign of a travel booking site, replacing an unfiltered scroll of tour packages with smart filtering and clearer, more readable trip details.",
+      tags: ["Web Design", "UI/UX", "Redesign"],
       image: "/images/urbanEscape/Post.png",
       screenshots: [
         "/images/urbanEscape/HomeTop.png",

@@ -9,21 +9,22 @@ const caseStudiesData = {
   "glowy-app": {
     title: "Glowy: Personalized Skincare, Simplified",
     category: "Mobile Design",
-    hero: "/images/glowy/home.png",
-    thumbnail: "/images/glowy/home.png",
+    hero: "/images/glowy/welcomePage.png",
+    thumbnail: "/images/glowy/home0.PNG",
     objective: "Design a mobile app that removes the guesswork from skincare by generating a personalized routine based on each user's skin type, concerns, and goals, then guiding them through it one simple step at a time.",
     problem: "Most skincare apps overwhelm users with generic advice, endless product catalogs, or overly technical routines that assume prior skincare knowledge. Users are left unsure what actually applies to their skin, in what order, or why. The result is that people abandon their routines within weeks, or never start one at all.",
     solution: "I designed Glowy around a short onboarding quiz that captures skin type, concerns, and lifestyle habits, then generates a personalized morning and night routine broken into clear, ordered steps. Instead of pushing users to buy new products, Glowy lets them log what they already own and builds the routine around it, with optional product recommendations only when helpful. A community layer lets users share their routines and get real recommendations from people with similar skin types, rather than generic influencer advice.",
     impact: "• 45% reduction in task completion time\n• 38% increase in user satisfaction scores\n• 60% decrease in support tickets\n• 25% increase in daily active users",
     figmaLink: "https://www.figma.com/proto/n1J8SlmGoCNzPbiQClcHJa/Glowy?page-id=0%3A1&node-id=1-345&viewport=302%2C241%2C0.27&t=eLOV5sUp3UE1NrLR-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1%3A345",
     gallery: [
-      "/images/glowy/home.png",
-      "/images/glowy/welcome.png",
-      "/images/glowy/login.png",
-      "/images/glowy/q1.png",
-      "/images/glowy/q4.png",
-      "/images/glowy/aiSkinAnalyze.png",
-      "/images/glowy/analyseComplete.png",
+      "/images/glowy/home1.PNG",
+      "/images/glowy/welcome.PNG",
+      "/images/glowy/login.PNG",
+      "/images/glowy/q1.PNG",
+      "/images/glowy/q4.PNG",
+      "/images/glowy/aiSkinAnalyze.PNG",
+      "/images/glowy/aiscaning.PNG",
+      "/images/glowy/home2.PNG",
     ],
     keyTakeaways: [
       { title: "User-Centered", desc: "Prioritized reducing decision fatigue over feature count." },
@@ -48,7 +49,7 @@ const caseStudiesData = {
       "/images/urbanEscape/Contact.png",
       "/images/urbanEscape/faq.png",
     ],
-     keyTakeaways: [
+    keyTakeaways: [
       { title: "Information Architecture", desc: "Reorganizing content mattered more than restyling it." },
       { title: "Scannability", desc: "Breaking up dense text made trip details actually usable." },
       { title: "Self-Directed Project", desc: "Redesigned independently to practice solving real, observed UX problems." }
@@ -151,9 +152,8 @@ export default function CaseStudy() {
                 height: `${100 + Math.random() * 200}px`,
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
-                background: `radial-gradient(circle, ${
-                  ['rgba(20, 184, 166, 0.1)', 'rgba(6, 182, 212, 0.1)', 'rgba(16, 185, 129, 0.1)'][Math.floor(Math.random() * 3)]
-                }, transparent)`,
+                background: `radial-gradient(circle, ${['rgba(20, 184, 166, 0.1)', 'rgba(6, 182, 212, 0.1)', 'rgba(16, 185, 129, 0.1)'][Math.floor(Math.random() * 3)]
+                  }, transparent)`,
                 filter: 'blur(40px)',
               }}
               animate={{
@@ -262,9 +262,8 @@ export default function CaseStudy() {
                 height: `${100 + Math.random() * 300}px`,
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
-                background: `radial-gradient(circle, ${
-                  ['rgba(20, 184, 166, 0.1)', 'rgba(6, 182, 212, 0.1)', 'rgba(16, 185, 129, 0.1)'][Math.floor(Math.random() * 3)]
-                }, transparent)`,
+                background: `radial-gradient(circle, ${['rgba(20, 184, 166, 0.1)', 'rgba(6, 182, 212, 0.1)', 'rgba(16, 185, 129, 0.1)'][Math.floor(Math.random() * 3)]
+                  }, transparent)`,
                 filter: 'blur(40px)',
               }}
               animate={{
@@ -285,12 +284,12 @@ export default function CaseStudy() {
 
         <div className="max-w-6xl mx-auto relative z-10 w-full">
           <div className="grid md:grid-cols-2 gap-12 items-center">{id === "urbanEscapeTour" && <div className="md:hidden mb-8" />}
-            <div>
+            <div className="min-w-0">
               <motion.div
-                className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-teal-500/20 to-cyan-500/20 backdrop-blur-sm border border-teal-400/30 rounded-full mb-6"
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
+                className="relative flex items-center justify-center"
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1, delay: 0.4 }}
               >
                 <div className="w-2 h-2 bg-teal-400 rounded-full animate-pulse" />
                 <span className="text-teal-300 text-sm font-semibold uppercase tracking-wider">
@@ -348,7 +347,7 @@ export default function CaseStudy() {
             </div>
 
             <motion.div
-              className="relative flex items-center justify-center"
+              className="relative flex items-center justify-center min-w-0"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, delay: 0.4 }}
@@ -433,89 +432,43 @@ export default function CaseStudy() {
               ) : (
                 // Angular Phone Displays for Mobile Apps
                 <div className="relative w-full h-[500px] flex items-center justify-center">
-                  {caseStudy.gallery.slice(0, 3).map((image, idx) => (
+                  {[
+                    "/images/glowy/phone1.png",
+                    "/images/glowy/phone2.png",
+                    "/images/glowy/phone3.png",
+                  ].map((image, idx) => (
                     <motion.div
                       key={idx}
                       className="absolute"
                       style={{
-                        width: '280px',
-                        height: '560px',
+                        width: '260px',
                         zIndex: idx === 1 ? 3 : 2,
                       }}
                       initial={{
                         opacity: 0,
                         x: idx === 0 ? -100 : idx === 2 ? 100 : 0,
-                        rotate: idx === 0 ? -8 : idx === 2 ? 8 : 0
                       }}
                       animate={{
                         opacity: 1,
                         x: idx === 0 ? -140 : idx === 2 ? 140 : 0,
-                        rotate: idx === 0 ? -8 : idx === 2 ? 8 : 0,
-                        y: idx === 1 ? -20 : 10
+                        y: idx === 1 ? -20 : 10,
                       }}
                       transition={{ duration: 0.8, delay: 0.4 + idx * 0.2 }}
                       whileHover={{
                         y: idx === 1 ? -40 : -10,
                         scale: 1.05,
-                        zIndex: 10
+                        zIndex: 10,
                       }}
                     >
-                      {/* Phone Screen with Status Bar */}
-                      <div className="relative w-full h-full bg-black rounded-[2.5rem] shadow-2xl overflow-hidden">
-                        {/* Status Bar */}
-                        <div className="absolute top-0 left-0 right-0 z-20 bg-gradient-to-b from-black/80 to-transparent px-6 py-2 flex items-center justify-between text-white text-xs">
-                          <span className="font-semibold">9:41</span>
-                          <div className="flex items-center gap-1">
-                            <svg className="w-4 h-3" viewBox="0 0 16 12" fill="currentColor">
-                              <path d="M0 4h3v4H0V4zm4 0h3v4H4V4zm4 0h3v4H8V4zm4 0h3v4h-3V4z" opacity="0.4"/>
-                              <path d="M12 4h3v4h-3V4z"/>
-                            </svg>
-                            <svg className="w-4 h-4" viewBox="0 0 16 16" fill="currentColor">
-                              <path d="M2 6c0-.6.4-1 1-1h10c.6 0 1 .4 1 1v4c0 .6-.4 1-1 1H3c-.6 0-1-.4-1-1V6zm13 2v0c.6 0 1-.4 1-1s-.4-1-1-1v2z"/>
-                            </svg>
-                            <span className="text-[10px]">100%</span>
-                          </div>
-                        </div>
-
-                        {/* Screen Content */}
-                        <ImageWithFallback
-                          src={image}
-                          alt={`${caseStudy.title} - Screen ${idx + 1}`}
-                          className="w-full h-full object-cover"
-                        />
-
-                        {/* Subtle Overlay */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent pointer-events-none" />
-                      </div>
+                      <ImageWithFallback
+                        src={image}
+                        alt={`${caseStudy.title} - Screen ${idx + 1}`}
+                        className="w-full h-auto"
+                      />
                     </motion.div>
                   ))}
-
-                  {/* Animated Glow Elements */}
-                  <motion.div
-                    className="absolute -top-10 -right-10 w-48 h-48 bg-gradient-to-br from-teal-400/40 to-cyan-400/40 rounded-full blur-3xl"
-                    animate={{
-                      scale: [1, 1.4, 1],
-                      opacity: [0.5, 0.8, 0.5],
-                    }}
-                    transition={{
-                      duration: 4,
-                      repeat: Infinity,
-                      ease: "easeInOut",
-                    }}
-                  />
-                  <motion.div
-                    className="absolute -bottom-10 -left-10 w-56 h-56 bg-gradient-to-br from-emerald-400/40 to-teal-400/40 rounded-full blur-3xl"
-                    animate={{
-                      scale: [1.4, 1, 1.4],
-                      opacity: [0.8, 0.5, 0.8],
-                    }}
-                    transition={{
-                      duration: 5,
-                      repeat: Infinity,
-                      ease: "easeInOut",
-                    }}
-                  />
                 </div>
+
               )}
             </motion.div>
           </div>
@@ -683,53 +636,53 @@ export default function CaseStudy() {
         >
 
           <div className="text-center mb-16">
-    <motion.div
-      className="inline-flex items-center gap-4 mb-6"
-      initial={{ opacity: 0, scale: 0.9 }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      viewport={{ once: true }}
-    >
-      <div className="h-px w-20 bg-gradient-to-r from-transparent to-teal-300" />
-      <div className="w-20 h-20 bg-gradient-to-br from-teal-500 to-cyan-500 rounded-full flex items-center justify-center shadow-lg shadow-teal-500/30">
-        <span className="text-white font-bold text-3xl">04</span>
-      </div>
-      <div className="h-px w-20 bg-gradient-to-l from-transparent to-teal-300" />
-    </motion.div>
-    <h2 className="text-6xl font-bold text-slate-900 mb-4">Design Goals</h2>
-    <p className="text-slate-500 uppercase text-sm tracking-widest">What The Design Prioritizes</p>
-  </div>
+            <motion.div
+              className="inline-flex items-center gap-4 mb-6"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+            >
+              <div className="h-px w-20 bg-gradient-to-r from-transparent to-teal-300" />
+              <div className="w-20 h-20 bg-gradient-to-br from-teal-500 to-cyan-500 rounded-full flex items-center justify-center shadow-lg shadow-teal-500/30">
+                <span className="text-white font-bold text-3xl">04</span>
+              </div>
+              <div className="h-px w-20 bg-gradient-to-l from-transparent to-teal-300" />
+            </motion.div>
+            <h2 className="text-6xl font-bold text-slate-900 mb-4">Design Goals</h2>
+            <p className="text-slate-500 uppercase text-sm tracking-widest">What The Design Prioritizes</p>
+          </div>
 
-  <div className="grid md:grid-cols-2 gap-6 mb-16">
-    {[
-      { title: "Faster Discovery", desc: "Filters for destination, trip length, and category replace endless scrolling." },
-      { title: "Organized by Design", desc: "Packages are grouped and structured, not just dumped on the page." },
-      { title: "Readable Details", desc: "Long, dense paragraphs rewritten into clear, scannable sections." },
-      { title: "Practice Redesign", desc: "An independent redesign exercise based on a real site's UX shortcomings." },
-    ].map((goal, index) => (
-      <motion.div
-        key={index}
-        className="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-2xl p-8 shadow-lg border border-teal-100 relative overflow-hidden group hover:shadow-xl transition-all"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ delay: index * 0.1 }}
-        whileHover={{ y: -5 }}
-      >
-        <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-teal-200/30 to-cyan-200/30 rounded-full blur-2xl" />
-        <div className="relative z-10">
-          <h3 className="text-2xl font-bold text-slate-900 mb-2">
-            {goal.title}
-          </h3>
-          <p className="text-slate-700 text-lg leading-relaxed">
-            {goal.desc}
-          </p>
-        </div>
-      </motion.div>
-    ))}
-  </div>
-          
+          <div className="grid md:grid-cols-2 gap-6 mb-16">
+            {[
+              { title: "Faster Discovery", desc: "Filters for destination, trip length, and category replace endless scrolling." },
+              { title: "Organized by Design", desc: "Packages are grouped and structured, not just dumped on the page." },
+              { title: "Readable Details", desc: "Long, dense paragraphs rewritten into clear, scannable sections." },
+              { title: "Practice Redesign", desc: "An independent redesign exercise based on a real site's UX shortcomings." },
+            ].map((goal, index) => (
+              <motion.div
+                key={index}
+                className="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-2xl p-8 shadow-lg border border-teal-100 relative overflow-hidden group hover:shadow-xl transition-all"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                whileHover={{ y: -5 }}
+              >
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-teal-200/30 to-cyan-200/30 rounded-full blur-2xl" />
+                <div className="relative z-10">
+                  <h3 className="text-2xl font-bold text-slate-900 mb-2">
+                    {goal.title}
+                  </h3>
+                  <p className="text-slate-700 text-lg leading-relaxed">
+                    {goal.desc}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
 
-         
+
+
 
           {/* Gallery in Section 4 - Mobile App Screens Layout */}
           <div className="mt-20">
@@ -758,7 +711,7 @@ export default function CaseStudy() {
                     "col-span-1 row-span-1",
                   ];
                   const spanClass = pattern[index % pattern.length];
-                  
+
                   return (
                     <motion.div
                       key={index}
@@ -766,11 +719,11 @@ export default function CaseStudy() {
                       initial={{ opacity: 0, scale: 0.8, rotate: Math.random() * 8 - 4 }}
                       whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
                       viewport={{ once: true, margin: "-50px" }}
-                      transition={{ 
+                      transition={{
                         type: "spring",
                         stiffness: 100,
                         damping: 15,
-                        delay: index * 0.1 
+                        delay: index * 0.1
                       }}
                       whileHover={{ y: -8, scale: 1.02, zIndex: 10 }}
                       onClick={() => openLightbox(image)}
@@ -813,11 +766,11 @@ export default function CaseStudy() {
                         <span className="font-semibold">9:41</span>
                         <div className="flex items-center gap-1">
                           <svg className="w-3 h-2.5" viewBox="0 0 16 12" fill="currentColor">
-                            <path d="M0 4h3v4H0V4zm4 0h3v4H4V4zm4 0h3v4H8V4zm4 0h3v4h-3V4z" opacity="0.4"/>
-                            <path d="M12 4h3v4h-3V4z"/>
+                            <path d="M0 4h3v4H0V4zm4 0h3v4H4V4zm4 0h3v4H8V4zm4 0h3v4h-3V4z" opacity="0.4" />
+                            <path d="M12 4h3v4h-3V4z" />
                           </svg>
                           <svg className="w-3 h-3" viewBox="0 0 16 16" fill="currentColor">
-                            <path d="M2 6c0-.6.4-1 1-1h10c.6 0 1 .4 1 1v4c0 .6-.4 1-1 1H3c-.6 0-1-.4-1-1V6zm13 2v0c.6 0 1-.4 1-1s-.4-1-1-1v2z"/>
+                            <path d="M2 6c0-.6.4-1 1-1h10c.6 0 1 .4 1 1v4c0 .6-.4 1-1 1H3c-.6 0-1-.4-1-1V6zm13 2v0c.6 0 1-.4 1-1s-.4-1-1-1v2z" />
                           </svg>
                           <span className="text-[9px]">100%</span>
                         </div>

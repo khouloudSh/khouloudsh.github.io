@@ -25,6 +25,8 @@ const caseStudiesData = {
       "/images/glowy/aiSkinAnalyze.PNG",
       "/images/glowy/aiscaning.PNG",
       "/images/glowy/home2.PNG",
+      "/images/glowy/morningRoutin.PNG",
+      "/images/glowy/nightRoutine.PNG",
     ],
     keyTakeaways: [
       { title: "User-Centered", desc: "Prioritized reducing decision fatigue over feature count." },

@@ -1,7 +1,7 @@
 import { Button } from "./ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { Badge } from "./ui/badge";
-import { Mail, Linkedin, Eye } from "lucide-react";
+import { Mail, Linkedin, Eye, ArrowUp } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
@@ -141,25 +141,34 @@ export default function HomePage() {
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-wrap gap-4 justify-center mb-16">
-              <a
-                href="#projects"
-                className="px-8 py-4 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-full font-semibold text-white"
-              >
-                <span className="flex items-center gap-2">
-                  Explore Work
-                  <span>→</span>
-                </span>
-              </a>
+           <div className="flex flex-wrap gap-4 justify-center mb-16">
+  
+  <a  href="#projects"
+    className="px-8 py-4 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-full font-semibold text-white"
+  >
+    <span className="flex items-center gap-2">
+      Explore Work
+      <span>→</span>
+    </span>
+  </a>
 
-              <Link
-                to="/resume"
-                className="px-8 py-4 rounded-full font-semibold text-white inline-flex items-center justify-center"
-                style={{ backgroundColor: 'rgba(15, 23, 42, 0.65)', borderColor: 'rgba(20, 184, 166, 0.3)', borderWidth: '2px' }}
-              >
-                Resume
-              </Link>
-            </div>
+  <Link
+    to="/resume"
+    className="px-8 py-4 rounded-full font-semibold text-white inline-flex items-center justify-center"
+    style={{ backgroundColor: 'rgba(15, 23, 42, 0.65)', borderColor: 'rgba(20, 184, 166, 0.3)', borderWidth: '2px' }}
+  >
+    Resume
+  </Link>
+
+  
+   <a href="mailto:shabou.khouloud@gmail.com"
+    className="px-8 py-4 rounded-full font-semibold text-white inline-flex items-center justify-center gap-2"
+    style={{ backgroundColor: 'rgba(15, 23, 42, 0.65)', borderColor: 'rgba(20, 184, 166, 0.3)', borderWidth: '2px' }}
+  >
+    <Mail className="w-4 h-4" />
+    Contact Me
+  </a>
+</div>
 
             {/* Scroll Indicator */}
             <div className="flex flex-col items-center gap-3">
@@ -187,18 +196,32 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8">
             <div className="flex-1 text-center md:text-left">
-              <h2 className="text-5xl font-bold mb-6 text-slate-900">
-                UI/UX Designer
-              </h2>
-              <p className="text-xl text-slate-600 mb-8">
-                Former software developer turned UX/UI designer. I build interfaces that are as functional as they are enjoyable to use.
-              </p>
+              <h2 className="text-5xl font-bold mb-3 text-slate-900">
+  UI/UX Designer
+</h2>
+
+{/* Credibility badges */}
+<div className="flex flex-wrap gap-3 justify-center md:justify-start mb-6">
+  <Badge variant="secondary" className="bg-gradient-to-r from-teal-50 to-cyan-50 text-teal-700 border border-teal-200/50 px-3 py-1">
+    Ex-Oracle
+  </Badge>
+  <Badge variant="secondary" className="bg-gradient-to-r from-teal-50 to-cyan-50 text-teal-700 border border-teal-200/50 px-3 py-1">
+    6+ Years in Tech
+  </Badge>
+  <Badge variant="secondary" className="bg-gradient-to-r from-teal-50 to-cyan-50 text-teal-700 border border-teal-200/50 px-3 py-1">
+    Concordia UI/UX Certificate
+  </Badge>
+</div>
+
+<p className="text-xl text-slate-600 mb-8">
+  6+ years as an Application Developer at Oracle, now designing web & mobile interfaces after completing UI/UX Design training at Concordia University. I combine technical depth with a user-first mindset to build products that are functional, intuitive, and genuinely enjoyable to use.
+</p>
               <div className="flex gap-4 justify-center md:justify-start">
                 <Button size="lg" className="bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-700 hover:to-cyan-700 text-white shadow-lg">
-                  View My Work
+                  <a href="#projects">View My Work</a>
                 </Button>
                 <Button size="lg" variant="outline" className="border-slate-700 text-slate-700 hover:bg-slate-50">
-                  Get In Touch
+                  <a href="mailto:shabou.khouloud@gmail.com">Get In Touch</a>
                 </Button>
               </div>
             </div>
@@ -442,11 +465,78 @@ export default function HomePage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 text-white py-8 px-6 sm:px-8 lg:px-10">
-        <div className="max-w-6xl mx-auto text-center">
-          <p className="text-slate-400">© 2026 Khouloud Shabou. All rights reserved.</p>
+ <footer className="bg-[#050b16] text-white py-16 px-6 sm:px-8 lg:px-10 relative">
+  <div className="max-w-6xl mx-auto">
+    <div className="flex flex-col md:flex-row justify-between items-start gap-10 mb-12">
+      {/* Left: Name + tagline */}
+      <div className="text-center md:text-left">
+  <h4 className="font-semibold text-xl text-white mb-3">Khouloud Shabou</h4>
+  <p className="text-slate-400 text-sm leading-relaxed max-w-xs mb-4">
+    UI/UX Designer crafting experiences that feel effortless.
+  </p>
+  <div className="inline-flex items-center gap-2 text-sm text-teal-400 px-3 py-1 rounded-full border border-teal-400/20 bg-teal-400/5">
+    <span className="w-2 h-2 bg-teal-400 rounded-full animate-pulse" />
+    Open to work
+  </div>
+</div>
+
+      {/* Middle: Navigation */}
+      <div className="text-center md:text-left">
+        <p className="text-teal-400 text-xs font-semibold tracking-widest mb-4">NAVIGATION</p>
+        <div className="flex flex-col gap-3">
+          <a href="#about" className="text-slate-400 hover:text-teal-400 transition-colors text-sm">About</a>
+          <a href="#projects" className="text-slate-400 hover:text-teal-400 transition-colors text-sm">Projects</a>
+          <a href="#skills" className="text-slate-400 hover:text-teal-400 transition-colors text-sm">Skills</a>
+          <a href="#contact" className="text-slate-400 hover:text-teal-400 transition-colors text-sm">Contact</a>
         </div>
-      </footer>
+      </div>
+
+      {/* Right: Connect */}
+      <div className="text-center md:text-left">
+        <p className="text-teal-400 text-xs font-semibold tracking-widest mb-4">CONNECT</p>
+        <div className="flex flex-col gap-3">
+          <a
+            href="mailto:shabou.khouloud@gmail.com"
+            className="text-slate-400 hover:text-teal-400 transition-colors text-sm flex items-center gap-2 justify-center md:justify-start"
+          >
+            <Mail className="w-4 h-4" />
+            shabou.khouloud@gmail.com
+          </a>
+          <a
+            href="https://www.linkedin.com/in/khouloud-shabou-09543b388/"
+            target="_blank"
+            rel="noreferrer"
+            className="text-slate-400 hover:text-teal-400 transition-colors text-sm flex items-center gap-2 justify-center md:justify-start"
+          >
+            <Linkedin className="w-4 h-4" />
+            LinkedIn
+          </a>
+          <Link
+            to="/resume"
+            className="text-slate-400 hover:text-teal-400 transition-colors text-sm flex items-center gap-2 justify-center md:justify-start"
+          >
+            <Eye className="w-4 h-4" />
+            Resume
+          </Link>
+        </div>
+      </div>
+    </div>
+
+    {/* Divider */}
+    <div className="border-t border-slate-800 pt-6 text-center">
+      <p className="text-slate-500 text-sm">© 2026 Khouloud Shabou. All rights reserved.</p>
+    </div>
+  </div>
+
+  {/* Back to top - floating circular button, bottom right */}
+  <a
+    href="#"
+    className="absolute bottom-8 right-6 sm:right-8 lg:right-10 w-10 h-10 rounded-full bg-slate-800 border border-slate-700 hover:border-teal-400/50 hover:bg-slate-700 transition-all flex items-center justify-center group"
+    aria-label="Back to top"
+  >
+    <ArrowUp className="w-4 h-4 text-slate-400 group-hover:text-teal-400 transition-colors" />
+  </a>
+</footer>
     </div>
   );
 }

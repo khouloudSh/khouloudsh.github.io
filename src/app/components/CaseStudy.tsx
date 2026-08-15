@@ -13,8 +13,39 @@ const caseStudiesData = {
     thumbnail: "/images/glowy/home0.PNG",
     objective: "Design a mobile app that removes the guesswork from skincare by generating a personalized routine based on each user's skin type, concerns, and goals, then guiding them through it one simple step at a time.",
     problem: "Most skincare apps overwhelm users with generic advice, endless product catalogs, or overly technical routines that assume prior skincare knowledge. Users are left unsure what actually applies to their skin, in what order, or why. The result is that people abandon their routines within weeks, or never start one at all.",
+    beforeAfter: {
+      beforeLabel: "Typical skincare apps",
+      afterLabel: "Glowy's approach",
+      before: [
+        "Generic product suggestions, not tailored to skin type",
+        "No real insight into what the skin actually needs",
+        "Overwhelming for beginners with no clear starting point",
+        "No sense of progress, so routines get abandoned",
+        "Pushes new products instead of using what you own"
+      ],
+      after: [
+        "AI skin scan reveals actual skin type and needs",
+        "Personalized routine, not generic advice",
+        "Simple, step-by-step guidance built for beginners",
+        "Progress tracking keeps users motivated",
+        "Log products you already own — no forced purchases"
+      ]
+    },
+    keyDecisions: [
+      {
+        decision: "A short onboarding quiz instead of a long profile setup",
+        reason: "Reduces drop-off and lets users see value — their personalized routine — within seconds, instead of a lengthy setup before any payoff."
+      },
+      {
+        decision: "Let users log products they already own instead of pushing new ones",
+        reason: "Builds trust and avoids feeling like a sales funnel. The app works with what users have rather than assuming they'll buy something new."
+      },
+      {
+        decision: "Added a community layer for real user recommendations",
+        reason: "People with similar skin types are more credible than generic influencer advice, and it keeps users engaged beyond just following a routine alone."
+      }
+    ], 
     solution: "I designed Glowy around a short onboarding quiz that captures skin type, concerns, and lifestyle habits, then generates a personalized morning and night routine broken into clear, ordered steps. Instead of pushing users to buy new products, Glowy lets them log what they already own and builds the routine around it, with optional product recommendations only when helpful. A community layer lets users share their routines and get real recommendations from people with similar skin types, rather than generic influencer advice.",
-    impact: "• 45% reduction in task completion time\n• 38% increase in user satisfaction scores\n• 60% decrease in support tickets\n• 25% increase in daily active users",
     figmaLink: "https://www.figma.com/proto/n1J8SlmGoCNzPbiQClcHJa/Glowy?page-id=0%3A1&node-id=1-345&viewport=302%2C241%2C0.27&t=eLOV5sUp3UE1NrLR-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1%3A345",
     gallery: [
       "/images/glowy/login.PNG",
@@ -43,8 +74,39 @@ const caseStudiesData = {
     thumbnail: "/images/urbanEscape/HomeTop.png",
     objective: "Redesign an existing travel booking website to make discovering and comparing tour packages faster and less overwhelming, while making trip details easy to actually read.",
     problem: "The original site displayed all tour packages in one long, unfiltered list that visitors had to scroll through manually with no way to narrow results by destination, duration, or trip type. The trip detail pages were just as difficult: information was presented in dense, uninterrupted paragraphs that made it hard to find key details like pricing, itinerary, or what was actually included.",
+    beforeAfter: {
+      beforeLabel: "The original site",
+      afterLabel: "The redesigned experience",
+      before: [
+        "All tour packages dumped in one long, unorganized list",
+        "No filtering by destination, trip length, or category",
+        "Required excessive scrolling to compare options",
+        "Pricing was often inaccurate or unclear",
+        "Trip details written in dense, uninterrupted paragraphs with no day-by-day structure"
+      ],
+      after: [
+        "Homepage highlights only the most popular packages, with a clear link to the full list",
+        "Dedicated packages page with filters for destination, trip length, and category",
+        "Each package shown as a card with image, title, duration, and destination at a glance",
+        "Trip details broken into day-by-day tabs (Day 1, Day 2, Day 3...) instead of long paragraphs",
+        "Key details and photos highlighted per day, making the itinerary easy to scan"
+      ]
+    },
     solution: "I redesigned the packages page around a filtering system that lets users narrow results by destination, trip length, and category, so they can find relevant tours in seconds instead of scrolling through everything. On the detail pages, I broke the dense paragraphs into scannable sections with clear headings, so users can quickly find what they're looking for instead of reading a wall of text.",
-    impact: "• 45% increase in booking completion rate\n• 60% reduction in search time\n• 35% increase in user engagement\n• 50% improvement in mobile conversions",
+    keyDecisions: [
+      {
+        decision: "Highlighted only the most popular packages on the homepage",
+        reason: "The original homepage overwhelmed users with every package at once. Surfacing the most relevant options first reduces decision fatigue, while a clear link still leads to the full list."
+      },
+      {
+        decision: "Added filters for destination, trip length, and category",
+        reason: "Lets users narrow results to what actually matters to them instead of scrolling through unrelated packages."
+      },
+      {
+        decision: "Broke trip details into day-by-day tabs instead of long paragraphs",
+        reason: "Dense writing made it hard to know what each day involved. Tabs make the itinerary scannable and let users quickly find the information they care about."
+      }
+    ],
     figmaLink: "https://www.figma.com/proto/Kxa7mrRxFXEO86OjVSilWE/Untitled?page-id=0%3A1&node-id=31-859&viewport=1213%2C1044%2C0.36&t=HB48ZdeHs2i676Ub-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=31%3A859",
     gallery: [
       "/images/urbanEscape/HomeTop.png",
@@ -584,6 +646,59 @@ export default function CaseStudy() {
           </div>
         </motion.section>
 
+        {/* Before / After */}
+        <motion.section
+          className="mb-32"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-slate-900 mb-2">Before & After</h2>
+            <p className="text-slate-500 uppercase text-sm tracking-widest">What changed, and why</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            <motion.div
+              className="bg-white rounded-2xl p-8 shadow-lg border border-slate-200"
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+            >
+              <p className="text-xs font-semibold text-slate-400 tracking-widest mb-4">BEFORE</p>
+              <h3 className="text-xl font-bold text-slate-900 mb-4">{caseStudy.beforeAfter.beforeLabel}</h3>
+              <ul className="space-y-3">
+                {caseStudy.beforeAfter.before.map((point, i) => (
+                  <li key={i} className="text-slate-600 text-base flex gap-2">
+                    <span className="text-slate-400">•</span>
+                    {point}
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+
+            <motion.div
+              className="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-2xl p-8 shadow-lg border border-teal-200"
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+            >
+              <p className="text-xs font-semibold text-teal-600 tracking-widest mb-4">AFTER</p>
+              <h3 className="text-xl font-bold text-slate-900 mb-4">{caseStudy.beforeAfter.afterLabel}</h3>
+              <ul className="space-y-3">
+                {caseStudy.beforeAfter.after.map((point, i) => (
+                  <li key={i} className="text-slate-700 text-base flex gap-2">
+                    <span className="text-teal-600">•</span>
+                    {point}
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          </div>
+        </motion.section>
+
+
         {/* Solution */}
         <motion.section
           className="mb-32"
@@ -627,6 +742,39 @@ export default function CaseStudy() {
                 </p>
               </motion.div>
             </div>
+          </div>
+        </motion.section>
+        {/* Key Decisions */}
+        <motion.section
+          className="mb-32"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-slate-900 mb-2">Key Decisions</h2>
+            <p className="text-slate-500 uppercase text-sm tracking-widest">What I chose, and why</p>
+          </div>
+
+          <div className="space-y-6 max-w-4xl mx-auto">
+            {caseStudy.keyDecisions.map((item, index) => (
+              <motion.div
+                key={index}
+                className="bg-white rounded-2xl p-8 shadow-lg border border-slate-100"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+              >
+                <h3 className="text-xl font-bold text-slate-900 mb-2">
+                  {item.decision}
+                </h3>
+                <p className="text-slate-600 text-lg leading-relaxed">
+                  {item.reason}
+                </p>
+              </motion.div>
+            ))}
           </div>
         </motion.section>
 

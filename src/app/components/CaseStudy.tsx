@@ -3,6 +3,7 @@ import { ArrowLeft, ExternalLink, X, ChevronLeft, ChevronRight } from "lucide-re
 import { useNavigate, useParams } from "react-router-dom";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { useState, useEffect } from "react";
+import Footer from "./Footer";
 
 // Mock data for case studies
 const caseStudiesData = {
@@ -1113,6 +1114,7 @@ export default function CaseStudy() {
           </div>
         </motion.div>
       )}
+      <Footer />
     </div>
   );
 }

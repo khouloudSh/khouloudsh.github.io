@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
 import { ArrowLeft, Mail, Linkedin, Download } from "lucide-react";
+import Footer from "./Footer";
 
 export default function ResumePage() {
   return (
@@ -222,6 +223,7 @@ export default function ResumePage() {
           </aside>
         </section>
       </main>
+      <Footer />
     </div>
   );
 }

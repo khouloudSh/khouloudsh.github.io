@@ -6,17 +6,17 @@ import Footer from "./Footer";
 export default function ResumePage() {
   return (
     <div className="min-h-screen bg-[#f7f9fc] text-slate-700">
-      <header className="sticky top-0 w-full bg-[#f7f9fc]/95 border-b border-slate-200 shadow-sm shadow-slate-200/60 z-50 backdrop-blur">
-         <div className="max-w-6xl mx-auto px-6 py-4 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+      <header className="sticky top-0 w-full bg-[#08111E]/95 border-b border-slate-900/80 shadow-lg shadow-slate-950/20 z-50 backdrop-blur">
+        <div className="max-w-6xl mx-auto px-6 py-4 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <div>
-            <p className="text-sm uppercase tracking-[0.3em] text-cyan-600 font-semibold">Resume</p>
-            <h1 className="text-2xl font-semibold mt-1 text-slate-900">Khouloud Shabou</h1>
+            <p className="text-sm uppercase tracking-[0.3em] text-teal-300 font-semibold">Resume</p>
+            <h1 className="text-2xl font-semibold mt-1 text-white">Khouloud Shabou</h1>
           </div>
           <div className="flex items-center gap-3">
             <a
               href="/files/ui_ux_khouloudShabou_en.pdf"
               download="ui_ux_khouloudShabou_en.pdf"
-              className="inline-flex items-center gap-2 rounded-full border border-cyan-300 bg-white px-4 py-2 text-sm font-medium text-cyan-700 shadow-sm transition-colors hover:bg-cyan-50"
+              className="inline-flex items-center gap-2 rounded-full border border-slate-700 bg-slate-800/60 px-4 py-2 text-sm font-medium text-cyan-300 shadow-sm transition-colors hover:bg-slate-700"
             >
               <Download className="w-4 h-4" />
               Download PDF (EN)
@@ -24,7 +24,7 @@ export default function ResumePage() {
             <a
               href="/files/ui_ux_khouloudShabou_fr.pdf"
               download="ui_ux_khouloudShabou_fr.pdf"
-              className="inline-flex items-center gap-2 rounded-full border border-cyan-300 bg-white px-4 py-2 text-sm font-medium text-cyan-700 shadow-sm transition-colors hover:bg-cyan-50"
+              className="inline-flex items-center gap-2 rounded-full border border-slate-700 bg-slate-800/60 px-4 py-2 text-sm font-medium text-cyan-300 shadow-sm transition-colors hover:bg-slate-700"
             >
               <Download className="w-4 h-4" />
               Download PDF (FR)
@@ -45,7 +45,7 @@ export default function ResumePage() {
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900">UI/UX Designer </h2>
               <p className="text-slate-600 mt-3 max-w-2xl leading-relaxed">
-                 Web application developer transitioning into UI/UX design, combining hands-on front-end and back-end experience with a long-standing passion for design. From freelance visual work to a deeper focus on how products look, feel, and function for the people using them. Passionate about creating interfaces that are not just visually polished but intuitive, usable, and grounded in real user needs.              </p>
+                Web application developer transitioning into UI/UX design, combining hands-on front-end and back-end experience with a long-standing passion for design. From freelance visual work to a deeper focus on how products look, feel, and function for the people using them. Passionate about creating interfaces that are not just visually polished but intuitive, usable, and grounded in real user needs.              </p>
             </div>
             <div className="flex flex-col gap-3 text-sm text-slate-600">
               <div className="flex items-center gap-2">

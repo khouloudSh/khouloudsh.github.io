@@ -14,7 +14,7 @@ export default function HomePage() {
       title: "Glowy: Skincare App Design",
       description: "A personalized skincare app that analyzes your skin type and habits to generate a simple, tailored routine. No guesswork, no overwhelm.",
       tags: ["Mobile Design", "UX Research", "Prototyping"],
-      image: "/images/glowy/Post.png",
+      image: "/images/glowy/GowyThumbnail.png",
       screenshots: [
         "/images/glowy/welcome.png",
         "/images/glowy/Post.png",
@@ -26,7 +26,7 @@ export default function HomePage() {
       title: "Urban Escape Tours: Website Redesign",
       description: "A redesign of a travel booking site, replacing an unfiltered scroll of tour packages with smart filtering and clearer, more readable trip details.",
       tags: ["Web Design", "UI/UX", "Redesign"],
-      image: "/images/urbanEscape/Post.png",
+      image: "/images/urbanEscape/UET_Thumbnail.png",
       screenshots: [
         "/images/urbanEscape/HomeTop.png",
         "/images/urbanEscape/Detail.png",

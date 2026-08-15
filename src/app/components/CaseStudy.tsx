@@ -45,22 +45,22 @@ const caseStudiesData = {
         decision: "Added a community layer for real user recommendations",
         reason: "People with similar skin types are more credible than generic influencer advice, and it keeps users engaged beyond just following a routine alone."
       }
-    ], 
+    ],
     solution: "I designed Glowy around a short onboarding quiz that captures skin type, concerns, and lifestyle habits, then generates a personalized morning and night routine broken into clear, ordered steps. Instead of pushing users to buy new products, Glowy lets them log what they already own and builds the routine around it, with optional product recommendations only when helpful. A community layer lets users share their routines and get real recommendations from people with similar skin types, rather than generic influencer advice.",
     figmaLink: "https://www.figma.com/proto/n1J8SlmGoCNzPbiQClcHJa/Glowy?page-id=0%3A1&node-id=1-345&viewport=302%2C241%2C0.27&t=eLOV5sUp3UE1NrLR-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1%3A345",
     gallery: [
-      "/images/glowy/login.PNG",
-      "/images/glowy/q1.PNG",
-      "/images/glowy/q4.PNG",
-      "/images/glowy/aiSkinAnalyze.PNG",
-      "/images/glowy/aiscaning.PNG",
-      "/images/glowy/home1.PNG",
-      "/images/glowy/home2.PNG",
-      "/images/glowy/morningRoutin.PNG",
-      "/images/glowy/nightRoutine.PNG",
-      "/images/glowy/overlay.PNG",
-      "/images/glowy/community.PNG",
-      "/images/glowy/diary.PNG",
+      { src: "/images/glowy/login.PNG", alt: "Glowy login screen" },
+      { src: "/images/glowy/q1.PNG", alt: "Onboarding quiz asking about skin type" },
+      { src: "/images/glowy/q4.PNG", alt: "Onboarding quiz asking about skincare goals" },
+      { src: "/images/glowy/aiSkinAnalyze.PNG", alt: "AI skin analysis results screen" },
+      { src: "/images/glowy/aiscaning.PNG", alt: "AI skin scanning in progress" },
+      { src: "/images/glowy/home1.PNG", alt: "Home screen showing personalized routine" },
+      { src: "/images/glowy/home2.PNG", alt: "Home screen with routine progress tracking" },
+      { src: "/images/glowy/morningRoutin.PNG", alt: "Morning skincare routine steps" },
+      { src: "/images/glowy/nightRoutine.PNG", alt: "Night skincare routine steps" },
+      { src: "/images/glowy/overlay.PNG", alt: "Routine step detail overlay" },
+      { src: "/images/glowy/community.PNG", alt: "Community feed with user recommendations" },
+      { src: "/images/glowy/diary.PNG", alt: "Skin diary tracking progress over time" },
     ],
     keyTakeaways: [
       { title: "User-Centered", desc: "Prioritized reducing decision fatigue over feature count." },
@@ -110,11 +110,11 @@ const caseStudiesData = {
     ],
     figmaLink: "https://www.figma.com/proto/Kxa7mrRxFXEO86OjVSilWE/Untitled?page-id=0%3A1&node-id=31-859&viewport=1213%2C1044%2C0.36&t=HB48ZdeHs2i676Ub-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=31%3A859",
     gallery: [
-      "/images/urbanEscape/HomeTop.png",
-      "/images/urbanEscape/Detail.png",
-      "/images/urbanEscape/Packages.png",
-      "/images/urbanEscape/Contact.png",
-      "/images/urbanEscape/faq.png",
+      { src: "/images/urbanEscape/HomeTop.png", alt: "Homepage showing highlighted popular tour packages" },
+      { src: "/images/urbanEscape/Detail.png", alt: "Trip detail page with day-by-day tabs" },
+      { src: "/images/urbanEscape/Packages.png", alt: "Packages page with filtering by destination and trip length" },
+      { src: "/images/urbanEscape/Contact.png", alt: "Contact page" },
+      { src: "/images/urbanEscape/faq.png", alt: "Frequently asked questions page" },
     ],
     keyTakeaways: [
       { title: "Information Architecture", desc: "Reorganizing content mattered more than restyling it." },
@@ -141,7 +141,8 @@ export default function CaseStudy() {
   const navigate = useNavigate();
   const { id } = useParams();
   const [lightboxOpen, setLightboxOpen] = useState(false);
-  const [selectedImage, setSelectedImage] = useState("");
+  const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null);
+
 
   const caseStudy = caseStudiesData[id as keyof typeof caseStudiesData];
 
@@ -150,24 +151,24 @@ export default function CaseStudy() {
     window.scrollTo(0, 0);
   }, [id]);
 
-  const openLightbox = (imageSrc: string) => {
-    setSelectedImage(imageSrc);
+  const openLightbox = (image: { src: string; alt: string }) => {
+    setSelectedImage(image);
     setLightboxOpen(true);
   };
 
   const closeLightbox = () => {
     setLightboxOpen(false);
-    setSelectedImage("");
+    setSelectedImage(null);
   };
 
   const nextImage = () => {
-    const currentIndex = caseStudy.gallery.indexOf(selectedImage);
+    const currentIndex = caseStudy.gallery.findIndex((img) => img.src === selectedImage?.src);
     const nextIndex = (currentIndex + 1) % caseStudy.gallery.length;
     setSelectedImage(caseStudy.gallery[nextIndex]);
   };
 
   const prevImage = () => {
-    const currentIndex = caseStudy.gallery.indexOf(selectedImage);
+    const currentIndex = caseStudy.gallery.findIndex((img) => img.src === selectedImage?.src);
     const prevIndex = (currentIndex - 1 + caseStudy.gallery.length) % caseStudy.gallery.length;
     setSelectedImage(caseStudy.gallery[prevIndex]);
   };
@@ -436,8 +437,8 @@ export default function CaseStudy() {
                     transition={{ duration: 0.8, delay: 0.6 }}
                   >
                     <ImageWithFallback
-                      src={caseStudy.gallery[0]}
-                      alt={caseStudy.title}
+                      src={caseStudy.gallery[0].src}
+                      alt={caseStudy.gallery[0].alt}
                       className="w-full h-auto"
                     />
                   </motion.div>
@@ -450,8 +451,8 @@ export default function CaseStudy() {
                     transition={{ duration: 0.8, delay: 0.8 }}
                   >
                     <ImageWithFallback
-                      src={caseStudy.gallery[2]}
-                      alt={`${caseStudy.title} - Left`}
+                      src={caseStudy.gallery[2].src}
+                      alt={caseStudy.gallery[2].alt}
                       className="w-full h-auto"
                     />
                   </motion.div>
@@ -464,8 +465,8 @@ export default function CaseStudy() {
                     transition={{ duration: 0.8, delay: 0.8 }}
                   >
                     <ImageWithFallback
-                      src={caseStudy.gallery[1]}
-                      alt={`${caseStudy.title} - Right`}
+                      src={caseStudy.gallery[1].src}
+                      alt={caseStudy.gallery[1].alt}
                       className="w-full h-auto"
                     />
                   </motion.div>
@@ -882,8 +883,8 @@ export default function CaseStudy() {
                       onClick={() => openLightbox(image)}
                     >
                       <ImageWithFallback
-                        src={image}
-                        alt={`${caseStudy.title} - Screen ${index + 1}`}
+                        src={image.src}
+                        alt={image.alt}
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-teal-900/80 via-teal-900/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300">
@@ -903,7 +904,7 @@ export default function CaseStudy() {
             ) : (
               // Mobile Grid
               <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
-                {caseStudy.gallery.map((image, index) => (
+                {caseStudy.gallery.map((item, index) => (
                   <motion.div
                     key={index}
                     className="cursor-pointer"
@@ -912,7 +913,7 @@ export default function CaseStudy() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     whileHover={{ scale: 1.05 }}
-                    onClick={() => openLightbox(image)}
+                    onClick={() => openLightbox(item)}
                   >
                     <div className="relative aspect-[9/19.5] bg-black rounded-2xl shadow-xl overflow-hidden">
                       <div className="absolute top-0 left-0 right-0 z-20 bg-gradient-to-b from-black/80 to-transparent px-4 py-2 flex items-center justify-between text-white text-xs">
@@ -929,9 +930,9 @@ export default function CaseStudy() {
                         </div>
                       </div>
                       <ImageWithFallback
-                        src={image}
-                        alt={`${caseStudy.title} - Screen ${index + 1}`}
-                        className="w-full h-full object-cover"
+                        src={item?.src}
+                        alt={item?.alt || "Full screen view"}
+                        className="w-full h-full object-contain"
                       />
                     </div>
                   </motion.div>
@@ -1101,8 +1102,8 @@ export default function CaseStudy() {
               className="w-full h-full flex items-center justify-center"
             >
               <ImageWithFallback
-                src={selectedImage}
-                alt="Full screen view"
+                src={selectedImage?.src}
+                alt={selectedImage?.alt || "Full screen view"}
                 className="w-full h-full object-contain"
               />
             </motion.div>
@@ -1110,7 +1111,7 @@ export default function CaseStudy() {
 
           {/* Image Counter */}
           <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white text-sm bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full">
-            {caseStudy.gallery.indexOf(selectedImage) + 1} / {caseStudy.gallery.length}
+            {caseStudy.gallery.findIndex((img) => img.src === selectedImage?.src) + 1} / {caseStudy.gallery.length}
           </div>
         </motion.div>
       )}

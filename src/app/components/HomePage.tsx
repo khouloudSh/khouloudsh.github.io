@@ -467,9 +467,9 @@ export default function HomePage() {
       {/* Footer */}
       <footer className="bg-[#050b16] text-white py-16 px-6 sm:px-8 lg:px-10 relative">
         <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-start gap-10 mb-12">
+          <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-10 mb-12 text-center md:text-left">
             {/* Left: Name + tagline */}
-            <div className="text-center md:text-left">
+            <div>
               <h4 className="font-semibold text-xl text-white mb-3">Khouloud Shabou</h4>
               <p className="text-slate-400 text-sm leading-relaxed max-w-xs mb-4">
                 UI/UX Designer crafting experiences that feel effortless.
@@ -480,8 +480,8 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Middle: Navigation */}
-            <div className="text-center md:text-left">
+            {/* Middle: Navigation - hidden on mobile, already in top nav */}
+            <div className="hidden md:block">
               <p className="text-teal-400 text-xs font-semibold tracking-widest mb-4">NAVIGATION</p>
               <div className="flex flex-col gap-3">
                 <a href="#about" className="text-slate-400 hover:text-teal-400 transition-colors text-sm">About</a>
@@ -492,28 +492,28 @@ export default function HomePage() {
             </div>
 
             {/* Right: Connect */}
-            <div className="text-center md:text-left">
+            <div>
               <p className="text-teal-400 text-xs font-semibold tracking-widest mb-4">CONNECT</p>
-              <div className="flex flex-col gap-3">
+              <div className="flex flex-col gap-3 items-center md:items-start">
                 <a
                   href="mailto:shabou.khouloud@gmail.com"
-                  className="text-slate-400 hover:text-teal-400 transition-colors text-sm flex items-center gap-2 justify-center md:justify-start"
+                  className="text-slate-400 hover:text-teal-400 transition-colors text-sm flex items-center gap-2"
                 >
-                  <Mail className="w-4 h-4" />
-                  shabou.khouloud@gmail.com
+                  <Mail className="w-4 h-4 flex-shrink-0" />
+                  <span className="break-all">shabou.khouloud@gmail.com</span>
                 </a>
                 <a
                   href="https://www.linkedin.com/in/khouloud-shabou-09543b388/"
                   target="_blank"
                   rel="noreferrer"
-                  className="text-slate-400 hover:text-teal-400 transition-colors text-sm flex items-center gap-2 justify-center md:justify-start"
+                  className="text-slate-400 hover:text-teal-400 transition-colors text-sm flex items-center gap-2"
                 >
                   <Linkedin className="w-4 h-4" />
                   LinkedIn
                 </a>
                 <Link
                   to="/resume"
-                  className="text-slate-400 hover:text-teal-400 transition-colors text-sm flex items-center gap-2 justify-center md:justify-start"
+                  className="text-slate-400 hover:text-teal-400 transition-colors text-sm flex items-center gap-2"
                 >
                   <Eye className="w-4 h-4" />
                   Resume
@@ -531,7 +531,7 @@ export default function HomePage() {
         {/* Back to top - floating circular button, bottom right */}
         <a
           href="#"
-          className="absolute bottom-8 right-6 sm:right-8 lg:right-10 w-10 h-10 rounded-full bg-slate-800 border border-slate-700 hover:border-teal-400/50 hover:bg-slate-700 transition-all flex items-center justify-center group"
+          className="absolute bottom-6 right-4 sm:right-6 lg:right-10 w-10 h-10 rounded-full bg-slate-800 border border-slate-700 hover:border-teal-400/50 hover:bg-slate-700 transition-all flex items-center justify-center group"
           aria-label="Back to top"
         >
           <ArrowUp className="w-4 h-4 text-slate-400 group-hover:text-teal-400 transition-colors" />

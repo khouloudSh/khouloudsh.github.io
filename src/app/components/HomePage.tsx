@@ -278,7 +278,7 @@ export default function HomePage() {
                     {/* Decorative Corner Element */}
                     <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-teal-200/50 to-transparent rounded-bl-full z-0" />
 
-                    <div className="relative h-48 overflow-hidden bg-gradient-to-br from-slate-100 to-slate-200">
+                    <div className="relative aspect-video overflow-hidden bg-gradient-to-br from-slate-100 to-slate-200">
                       {project.comingSoon ? (
                         // Coming Soon Display
                         <div className="relative w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-teal-900">
@@ -337,7 +337,7 @@ export default function HomePage() {
                             <ImageWithFallback
                               src={project.image}
                               alt={project.title}
-                              className="w-full h-full object-contain bg-white"
+                              className="w-full h-full object-cover bg-white"
                             />
                           </motion.div>
 
@@ -354,7 +354,7 @@ export default function HomePage() {
                             <ImageWithFallback
                               src={project.image}
                               alt={project.title}
-                              className="w-full h-full object-contain bg-white"
+                              className="w-full h-full object-cover bg-white"
                             />
                           </motion.div>
                           <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-slate-900/20" />

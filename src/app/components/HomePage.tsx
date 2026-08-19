@@ -1,13 +1,24 @@
+import { useState } from "react";
 import { Button } from "./ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { Badge } from "./ui/badge";
-import { Mail, Linkedin, Eye, ArrowUp } from "lucide-react";
+import { Mail, Linkedin, Eye, ArrowUp, Menu, X } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-import { motion } from "motion/react";
+import { motion, AnimatePresence } from "motion/react";
 import { Link } from "react-router-dom";
 import Footer from "./Footer";
 
 export default function HomePage() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const navLinks = [
+    { href: "#about", label: "About" },
+    { href: "#projects", label: "Projects" },
+    { href: "#skills", label: "Skills" },
+    { href: "#contact", label: "Contact" },
+  ];
+
+  const closeMenu = () => setIsMenuOpen(false);
   const projects = [
     {
       id: "glowy-app",
@@ -47,13 +58,57 @@ export default function HomePage() {
       <nav className="fixed top-0 w-full bg-[#08111E] border-b border-slate-900/80 shadow-lg shadow-slate-950/20 z-50">
         <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-10 py-4 flex justify-between items-center">
           <h1 className="font-semibold text-xl text-white">Khouloud Shabou</h1>
-          <div className="flex flex-wrap items-center gap-4 md:gap-6">
-            <a href="#about" className="hover:text-cyan-200 transition-colors text-slate-200">About</a>
-            <a href="#projects" className="hover:text-cyan-200 transition-colors text-slate-200">Projects</a>
-            <a href="#skills" className="hover:text-cyan-200 transition-colors text-slate-200">Skills</a>
-            <a href="#contact" className="hover:text-cyan-200 transition-colors text-slate-200">Contact</a>
+
+          {/* Desktop links */}
+          <div className="hidden md:flex flex-wrap items-center gap-4 md:gap-6">
+            {navLinks.map((link) => (
+              < a
+                key={link.href}
+                href={link.href}
+                className="hover:text-cyan-200 transition-colors text-slate-200"
+              >
+                {link.label}
+              </a>
+            ))}
           </div>
+
+          {/* Mobile hamburger toggle */}
+          <button
+            type="button"
+            onClick={() => setIsMenuOpen((open) => !open)}
+            className="md:hidden text-slate-200 hover:text-cyan-200 transition-colors p-1"
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isMenuOpen}
+          >
+            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
         </div>
+
+        {/* Mobile dropdown */}
+        <AnimatePresence>
+          {isMenuOpen && (
+            <motion.div
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: "auto", opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.25, ease: "easeInOut" }}
+              className="md:hidden overflow-hidden border-t border-slate-900/80 bg-[#08111E]"
+            >
+              <div className="flex flex-col px-6 sm:px-8 py-4 gap-4">
+                {navLinks.map((link) => (
+                  < a
+                    key={link.href}
+                    href={link.href}
+                    onClick={closeMenu}
+                    className="text-slate-200 hover:text-cyan-200 transition-colors text-lg"
+                  >
+                    {link.label}
+                  </a>
+                ))}
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </nav>
 
       {/* Creative Landing Section */}

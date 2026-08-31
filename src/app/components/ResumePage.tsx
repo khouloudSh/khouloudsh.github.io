@@ -45,7 +45,7 @@ export default function ResumePage() {
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900">UI/UX Designer </h2>
               <p className="text-slate-600 mt-3 max-w-2xl leading-relaxed">
-                Web application developer transitioning into UI/UX design, combining hands-on front-end and back-end experience with a long-standing passion for design. From freelance visual work to a deeper focus on how products look, feel, and function for the people using them. Passionate about creating interfaces that are not just visually polished but intuitive, usable, and grounded in real user needs.              </p>
+                UI/UX Designer with 6+ years of software development experience and hands-on experience creating user-centered digital experiences. Skilled in user flows, wireframing, high fidelity UI design, prototyping, usability testing, and Figma. Combines strong design skills with frontend expertise to create intuitive, accessible, and practical interfaces.</p>
             </div>
             <div className="flex flex-col gap-3 text-sm text-slate-600">
               <div className="flex items-center gap-2">
@@ -53,20 +53,13 @@ export default function ResumePage() {
                 <span>khouloudshabou@gmail.com</span>
               </div>
               <div className="flex items-center gap-2">
-                <svg className="w-4 h-4 text-cyan-600" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M6.6 10.8c1.4 2.7 3.6 4.9 6.3 6.3l2.1-2.1c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.5 0 1 .4 1 1V20c0 .6-.5 1-1 1-9.4 0-17-7.6-17-17 0-.5.4-1 1-1h3.7c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.3 0 .7-.2 1l-2.1 2.1z" />
-                </svg>
-                <span>(438) 921-6287</span>
-              </div>
-              <div className="flex items-center gap-2">
                 <Linkedin className="w-4 h-4 text-cyan-600" />
                 <a
                   href="https://www.linkedin.com/in/khouloud-shabou-09543b388/"
                   target="_blank"
                   rel="noreferrer"
-                  className="text-cyan-700 hover:text-cyan-900 transition-colors"
-                >
-                  linkedin.com/in/khouloud-shabou-09543b388/
+                  className="text-cyan-700 hover:text-cyan-900 transition-colors">
+                  https://www.linkedin.com/in/khouloudshabou/
                 </a>
               </div>
             </div>
@@ -82,35 +75,43 @@ export default function ResumePage() {
                   <p className="text-lg font-semibold text-slate-900">Application Developer at Oracle</p>
                   <p className="text-sm text-slate-500">Quebec · Jan 2020 – April 2026</p>
                   <ul className="mt-3 list-disc list-inside space-y-2 text-slate-600">
-                    <li>Designed and developed front-end and back-end components for business applications, working directly on the interfaces and workflows end users interacted with daily.</li>
-                    <li>Analyzed system specifications and business processes to translate requirements into functional, user-facing solutions.</li>
-                    <li>Collaborated cross-functionally to integrate enhancements and resolve usability and functional bugs.</li>
-                    <li>Wrote, tested, and debugged application code, developing a strong instinct for what is realistically buildable — a perspective now applied to design work.</li>
+                    <li>Translated functional requirements into clear technical specifications, helping teams align on application functionality and implementation requirements.</li>
+                    <li>Collaborated with cross-functional teams in Agile/Scrum workflows, participating in sprint planning, technical discussions, and solution development.</li>
+                    <li>Created and maintained technical documentation, including data-flow diagrams and technical specifications, to communicate system behavior and requirements clearly.</li>
+                    <li>Developed and tested RESTful APIs using JSON/XML, supporting system integration and communication between application components.</li>
+                    <li>Designed and developed enterprise application components in Java, applying software engineering principles to build scalable and maintainable solutions.</li>
+                    <li>Conducted unit and integration testing with JUnit to identify and resolve issues and improve application.</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <p className="text-lg font-semibold text-slate-900">Freelance Designer</p>
+                  <p className="text-sm text-slate-500">2014 – Present</p>
+                  <ul className="mt-3 list-disc list-inside space-y-2 text-slate-600">
+                    <li>Created visual design materials including logos, flyers, and promotional graphics based on client or project requirements.</li>
+                    <li>Used Adobe Photoshop and other design tools to develop visual concepts and refine designs based on feedback.</li>
+                    <li>Applied principles of typography, composition, color, and visual hierarchy to create clear and engaging designs.</li>
+                    <li>Maintained an independent design practice while exploring freelance opportunities through online platforms.</li>
                   </ul>
                 </div>
 
                 <div>
                   <p className="text-lg font-semibold text-slate-900">Real Estate Agent (Part-Time) at Blouin Immobilier</p>
-                  <p className="text-sm text-slate-500">Quebec · April 2021 – December 2023</p>
+                  <p className="text-sm text-slate-500">Quebec · April 2021 – June 2024</p>
                   <ul className="mt-3 list-disc list-inside space-y-2 text-slate-600">
-                    <li>Welcomed clients and presented available properties, coordinating visits and guiding rental decisions.</li>
-                    <li>Provided personalized follow-up on client requests to ensure satisfaction and efficient service.</li>
+                    <li>Consulted with clients to understand their needs and preferences, providing personalized guidance throughout rental decisions..</li>
+                    <li>Presented properties and coordinated visits based on client requirements, adapting recommendations to individual needs.</li>
+                    <li>Followed up on client requests and feedback to support a smooth experience and maintain client satisfaction.</li>
                   </ul>
                 </div>
 
                 <div>
                   <p className="text-lg font-semibold text-slate-900">Sales Advisor at LA Liberte</p>
-                  <p className="text-sm text-slate-500">Quebec · April 2019 – December 2019</p>
+                  <p className="text-sm text-slate-500">Quebec · April 2019 – January 2020</p>
                   <ul className="mt-3 list-disc list-inside space-y-2 text-slate-600">
-                    <li>Built client relationships and supported merchandise presentation and sales operations.</li>
-                  </ul>
-                </div>
-
-                <div>
-                  <p className="text-lg font-semibold text-slate-900">Sales Representative at SDI Marketing</p>
-                  <p className="text-sm text-slate-500">Montréal · April 2018 – February 2019</p>
-                  <ul className="mt-3 list-disc list-inside space-y-2 text-slate-600">
-                    <li>Prospected and acquired new clients, promoting and selling financial products.</li>
+                    <li>Engaged with customers to understand their needs and provide tailored product recommendations, strengthening customer-focused communication skills</li>
+                    <li>Organized and presented merchandise to improve product visibility and customer engagement.</li>
+                    <li>Supported day-to-day store operations, including transactions, inventory availability, and product organization.</li>
                   </ul>
                 </div>
 
@@ -118,18 +119,20 @@ export default function ResumePage() {
                   <p className="text-lg font-semibold text-slate-900">Administrative and Marketing Assistant</p>
                   <p className="text-sm text-slate-500">Tunisia · November 2014 - May 2015</p>
                   <ul className="mt-3 list-disc list-inside space-y-2 text-slate-600">
-                    <li>Created visual materials and publicity flyers using Adobe Photoshop, combining organizational skills with creative design to support marketing efforts.</li>
-                    <li>Assisted in planning and executing advertising campaigns to promote company services.</li>
-                    <li>Managed daily administrative tasks including scheduling and client communications.</li>
+                    <li>Created visual materials and promotional flyers using Adobe Photoshop to support marketing and communication initiatives.</li>
+                    <li>Assisted with planning and executing advertising campaigns to promote company services.</li>
+                    <li>Managed scheduling and client communications while coordinating multiple administrative tasks.</li>
                   </ul>
                 </div>
 
                 <div>
-                  <p className="text-lg font-semibold text-slate-900">Intern at Centre National Technologies Éducation</p>
+                  <p className="text-lg font-semibold text-slate-900">Web Development Intern at Centre National Technologies Éducation</p>
                   <p className="text-sm text-slate-500">Tunisia · January 2013 - April 2013</p>
                   <ul className="mt-3 list-disc list-inside space-y-2 text-slate-600">
-                    <li>Tested and debugged user interfaces and contributed to HTML programming for the organization's website.</li>
-                    <li>Participated in all phases of system design, gaining early exposure to the design-development relationship.</li>
+                    <li>Assisted with front-end development using HTML and CSS to create and update website pages.</li>
+                    <li>Participated in requirements analysis, system design, development, and testing throughout the software development process.</li>
+                    <li>Developed and modified back-end functionality using PHP, SQL, and Java within Eclipse.</li>
+                    <li>Tested and debugged user interface components to improve responsiveness and cross-browser compatibility.</li>
                   </ul>
                 </div>
               </div>
@@ -187,20 +190,12 @@ export default function ResumePage() {
 
           <aside className="space-y-8">
             <div className="rounded-[24px] border border-cyan-300 bg-[#f8fcff] p-8 shadow-sm shadow-slate-200/70">
-              <h3 className="text-2xl font-semibold text-slate-900 mb-4">Languages</h3>
-              <div className="space-y-2 text-slate-600 text-sm">
-                <p><span className="font-semibold text-slate-900">English</span></p>
-                <p><span className="font-semibold text-slate-900">French</span></p>
-                <p><span className="font-semibold text-slate-900">Arabic</span></p>
-              </div>
-            </div>
-
-            <div className="rounded-[24px] border border-cyan-300 bg-[#f8fcff] p-8 shadow-sm shadow-slate-200/70">
               <h3 className="text-2xl font-semibold text-slate-900 mb-4">Skills</h3>
               <div className="space-y-5 text-slate-600 text-sm leading-relaxed">
                 <div>
                   <p className="font-semibold text-slate-900 mb-2">UI/UX Design</p>
-                  <p>User research fundamentals, Typography, Color Theory, Grid Systems, Design Thinking, Responsive Design, Accessibility (WCAG), Wireframing, Prototyping, Interaction Design</p>
+                  <p>User research fundamentals, wireframing, prototyping, interaction design, information architecture, 
+                    User flows, design systems, responsive design, accessibility (WCAG), typography, color theory, grid systems, design thinking</p>
                 </div>
                 <div>
                   <p className="font-semibold text-slate-900 mb-2">Design Tools</p>
@@ -211,13 +206,54 @@ export default function ResumePage() {
                   <p>HTML5, CSS3, JavaScript, TypeScript, React</p>
                 </div>
                 <div>
-                  <p className="font-semibold text-slate-900 mb-2">Collaboration</p>
-                  <p>Agile/Scrum, Cross-functional teamwork, Design-to-code handoff, Jira, Confluence</p>
+                  <p className="font-semibold text-slate-900 mb-2">Research & Process</p>
+                  <p>User interviews, usability testing, persona development, A/B testing, user feedback analysis</p>
                 </div>
                 <div>
-                  <p className="font-semibold text-slate-900 mb-2">Research & Process</p>
-                  <p>User interviews, Usability testing, Persona development, User flows, A/B testing</p>
+                  <p className="font-semibold text-slate-900 mb-2">Collaboration</p>
+                  <p>Cross-functional collaboration (Design, Product, Research, Engineering), Agile/Scrum, design-to-development handoff, Jira, Confluence.</p>
                 </div>
+                
+              </div>
+              
+            </div>
+             <div className="rounded-[24px] border border-cyan-300 bg-[#f8fcff] p-8 shadow-sm shadow-slate-200/70">
+              <h3 className="text-2xl font-semibold text-slate-900 mb-4">Languages</h3>
+              <div className="space-y-2 text-slate-600 text-sm">
+                <p><span className="font-semibold text-slate-900">English</span> : Fluent</p>
+                <p><span className="font-semibold text-slate-900">French</span> : Fluent</p>
+                <p><span className="font-semibold text-slate-900">Arabic</span> : Native</p>
+              </div>
+            </div>
+
+            <div className="rounded-[24px] border border-cyan-300 bg-[#f8fcff] p-8 shadow-sm shadow-slate-200/70">
+              <h3 className="text-2xl font-semibold text-slate-900 mb-4">Additional Experience</h3>
+              <div className="space-y-5 text-slate-600 text-sm leading-relaxed">
+                <div>
+                  <p className="font-semibold text-slate-900">Sales Representative</p>
+                  <p>SDI Marketing, Montréal, Canada | Apr 2018 – Feb 2019</p>
+                </div>
+                <div>
+                  <p className="font-semibold text-slate-900">Substitute Teacher</p>
+                  <p>Primary School, Tunisia | Nov 2015 – Jan 2016</p>
+                </div>
+                <div>
+                  <p className="font-semibold text-slate-900">Owner/Operator, Internet Service Business</p>
+                  <p>Publinet (Self-employed), Tunisia | May 2015 – Nov 2015</p>
+                </div>
+                <div>
+                  <p className="font-semibold text-slate-900">Field Enumerator</p>
+                  <p>Institut National de la Statistique, Tunisia | Feb 2014 – May 2014</p>
+                </div>
+                <div>
+                  <p className="font-semibold text-slate-900">Administrative Assistant</p>
+                  <p>Agence d'assurance AMI, Tunis | Nov 2013 – Jan 2014</p>
+                </div>
+                 <div>
+                  <p className="font-semibold text-slate-900">Customer Service Intern</p>
+                  <p>Tunisie Télécom, Tunisia | Jul 2012</p>
+                </div>
+                
               </div>
             </div>
           </aside>

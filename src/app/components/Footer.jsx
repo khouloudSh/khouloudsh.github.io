@@ -22,10 +22,10 @@ export default function Footer() {
                     <div className="hidden md:block">
                         <p className="text-teal-400 text-xs font-semibold tracking-widest mb-4">NAVIGATION</p>
                         <div className="flex flex-col gap-3">
-                            <a href="/#about" className="text-slate-400 hover:text-teal-400 transition-colors text-sm">About</a>
-                            <a href="/#projects" className="text-slate-400 hover:text-teal-400 transition-colors text-sm">Projects</a>
-                            <a href="/#skills" className="text-slate-400 hover:text-teal-400 transition-colors text-sm">Skills</a>
-                            <a href="/#contact" className="text-slate-400 hover:text-teal-400 transition-colors text-sm">Contact</a>
+                            <a href="/about" className="text-slate-400 hover:text-teal-400 transition-colors text-sm">About me</a>
+                            <Link to="/#projects" className="text-slate-400 hover:text-teal-400 transition-colors text-sm">Projects</Link>
+                            <Link to="/#skills" className="text-slate-400 hover:text-teal-400 transition-colors text-sm">Skills</Link>
+                            <Link to="/#contact" className="text-slate-400 hover:text-teal-400 transition-colors text-sm">Contact</Link>
                         </div>
                     </div>
 
@@ -41,7 +41,7 @@ export default function Footer() {
                                 <span className="break-all">shabou.khouloud@gmail.com</span>
                             </a>
                             <a
-                                href="https://www.linkedin.com/in/khouloud-shabou-09543b388/"
+                                href="https://www.linkedin.com/in/khouloudshabou"
                                 target="_blank"
                                 rel="noreferrer"
                                 className="text-slate-400 hover:text-teal-400 transition-colors text-sm flex items-center gap-2"
@@ -49,13 +49,13 @@ export default function Footer() {
                                 <Linkedin className="w-4 h-4" />
                                 LinkedIn
                             </a>
-                            <Link
+                            {/*<Link
                                 to="/resume"
                                 className="text-slate-400 hover:text-teal-400 transition-colors text-sm flex items-center gap-2"
                             >
                                 <Eye className="w-4 h-4" />
                                 Resume
-                            </Link>
+                            </Link>*/}
                         </div>
                     </div>
                 </div>

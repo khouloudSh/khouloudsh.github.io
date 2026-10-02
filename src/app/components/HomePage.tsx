@@ -5,20 +5,13 @@ import { Badge } from "./ui/badge";
 import { Mail, Linkedin, Eye, ArrowUp, Menu, X } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { motion, AnimatePresence } from "motion/react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Footer from "./Footer";
+import Navbar from "./Navbar";
+import { useEffect } from "react";
+
 
 export default function HomePage() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const navLinks = [
-    { href: "#about", label: "About" },
-    { href: "#projects", label: "Projects" },
-    { href: "#skills", label: "Skills" },
-    { href: "#contact", label: "Contact" },
-  ];
-
-  const closeMenu = () => setIsMenuOpen(false);
   const projects = [
     {
       id: "glowy-app",
@@ -51,68 +44,21 @@ export default function HomePage() {
     "User Research", "Wireframing", "Prototyping", "Usability Testing", "Design Systems",
     "Information Architecture", "Interaction Design", "Visual Design", "Typography", "Color Theory"
   ];
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      document.querySelector(location.hash)?.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [location]);
 
   return (
     <div className="min-h-screen bg-slate-50">
-      {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-[#08111E] border-b border-slate-900/80 shadow-lg shadow-slate-950/20 z-50">
-        <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-10 py-4 flex justify-between items-center">
-          <h1 className="font-semibold text-xl text-white">Khouloud Shabou</h1>
-
-          {/* Desktop links */}
-          <div className="hidden md:flex flex-wrap items-center gap-4 md:gap-6">
-            {navLinks.map((link) => (
-              < a
-                key={link.href}
-                href={link.href}
-                className="hover:text-cyan-200 transition-colors text-slate-200"
-              >
-                {link.label}
-              </a>
-            ))}
-          </div>
-
-          {/* Mobile hamburger toggle */}
-          <button
-            type="button"
-            onClick={() => setIsMenuOpen((open) => !open)}
-            className="md:hidden text-slate-200 hover:text-cyan-200 transition-colors p-1"
-            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-            aria-expanded={isMenuOpen}
-          >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
-        </div>
-
-        {/* Mobile dropdown */}
-        <AnimatePresence>
-          {isMenuOpen && (
-            <motion.div
-              initial={{ height: 0, opacity: 0 }}
-              animate={{ height: "auto", opacity: 1 }}
-              exit={{ height: 0, opacity: 0 }}
-              transition={{ duration: 0.25, ease: "easeInOut" }}
-              className="md:hidden overflow-hidden border-t border-slate-900/80 bg-[#08111E]"
-            >
-              <div className="flex flex-col px-6 sm:px-8 py-4 gap-4">
-                {navLinks.map((link) => (
-                  < a
-                    key={link.href}
-                    href={link.href}
-                    onClick={closeMenu}
-                    className="text-slate-200 hover:text-cyan-200 transition-colors text-lg"
-                  >
-                    {link.label}
-                  </a>
-                ))}
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </nav>
-
+      <Navbar />
       {/* Creative Landing Section */}
       <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-[#020814]">
+        {/* Creative Landing Section */}
+
         {/* Static background layers */}
         <div className="absolute inset-0">
           {[...Array(3)].map((_, i) => (
@@ -208,13 +154,13 @@ export default function HomePage() {
                 </span>
               </a>
 
-              <Link
+              {/*<Link
                 to="/resume"
                 className="px-8 py-4 rounded-full font-semibold text-white inline-flex items-center justify-center"
                 style={{ backgroundColor: 'rgba(15, 23, 42, 0.65)', borderColor: 'rgba(20, 184, 166, 0.3)', borderWidth: '2px' }}
               >
                 Resume
-              </Link>
+              </Link>*/}
 
 
               <a href="mailto:shabou.khouloud@gmail.com"
@@ -258,19 +204,20 @@ export default function HomePage() {
 
               {/* Credibility badges */}
               <div className="flex flex-wrap gap-3 justify-center md:justify-start mb-6">
+
                 <Badge variant="secondary" className="bg-gradient-to-r from-teal-50 to-cyan-50 text-teal-700 border border-teal-200/50 px-3 py-1">
-                  Ex-Oracle
-                </Badge>
-                <Badge variant="secondary" className="bg-gradient-to-r from-teal-50 to-cyan-50 text-teal-700 border border-teal-200/50 px-3 py-1">
-                  6+ Years in Tech
+                  Google Certificate
                 </Badge>
                 <Badge variant="secondary" className="bg-gradient-to-r from-teal-50 to-cyan-50 text-teal-700 border border-teal-200/50 px-3 py-1">
                   Concordia UI/UX Certificate
                 </Badge>
+                <Badge variant="secondary" className="bg-gradient-to-r from-teal-50 to-cyan-50 text-teal-700 border border-teal-200/50 px-3 py-1">
+                  Ex-Oracle
+                </Badge>
               </div>
 
               <p className="text-xl text-slate-600 mb-8">
-                6+ years as an Application Developer at Oracle, now designing web & mobile interfaces after completing UI/UX Design training at Concordia University. I combine technical depth with a user-first mindset to build products that are functional, intuitive, and genuinely enjoyable to use.
+                I design intuitive, engaging digital experiences that make technology feel simple and human.
               </p>
               <div className="flex gap-4 justify-center md:justify-start">
                 <Button size="lg" className="bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-700 hover:to-cyan-700 text-white shadow-lg">
@@ -282,35 +229,14 @@ export default function HomePage() {
               </div>
             </div>
             <div className="flex-shrink-0 relative">
-              <div className="absolute inset-[-24px] rounded-full bg-[radial-gradient(circle_at_30%_30%,rgba(45,212,191,0.35),transparent_42%),radial-gradient(circle_at_70%_70%,rgba(99,102,241,0.2),transparent_48%)] blur-xl" />
-              <div className="absolute inset-[-6px] rounded-full border border-cyan-100/80" />
-              <div className="relative w-80 h-80 rounded-full overflow-hidden border-4 border-white/90 shadow-[0_20px_60px_rgba(15,23,42,0.12)] ring-4 ring-cyan-100/80">
+              <div className="flex-shrink-0">
                 <ImageWithFallback
-                  src="/images/unnamed.jpg"
+                  src="/images/profilePic.png"
                   alt="Profile"
-                  className="w-full h-full object-cover"
+                  className="w-72 md:w-80 h-auto rounded-2xl"
                 />
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* About Section */}
-      <section id="about" className="py-20 px-6 sm:px-8 lg:px-10 bg-gradient-to-br from-slate-50 to-slate-100">
-        <div className="max-w-6xl mx-auto text-center">
-          <h3 className="text-3xl font-bold mb-6 text-slate-900">My Design Philosophy</h3>
-          <p className="text-2xl md:text-3xl font-semibold text-teal-700 max-w-3xl mx-auto mb-10 leading-snug">
-            "Good design starts with the problem, not the interface."
-          </p>
-
-          <div className="max-w-5xl mx-auto text-left md:text-center">
-            <p className="text-slate-700 text-lg leading-relaxed mb-5">
-              I'm a UI/UX designer with a background in software development, and that shift shapes how I work. I understand what's technically feasible, which means I can design with engineers instead of just handing off to them, and speak their language when it matters.</p>
-            <p className="text-slate-700 text-lg leading-relaxed mb-5">
-              I spend time understanding what's actually causing friction for users before I design a solution, then test and refine until it genuinely works. The polish matters, but only once the problem is truly solved.</p>
-            <p className="text-slate-700 text-lg leading-relaxed">
-              My process blends user research, iterative design, and continuous testing, grounded in the problem-solving instincts I built as a developer. I love collaborating with teams to turn ideas into experiences that are functional, intuitive, and genuinely fun to use.</p>
           </div>
         </div>
       </section>
@@ -504,14 +430,14 @@ export default function HomePage() {
                 Email
               </a>
             </Button>
-            <Button asChild variant="outline" size="lg" className="gap-2 border-indigo-600 text-indigo-600 hover:bg-indigo-50">
+            {/*<Button asChild variant="outline" size="lg" className="gap-2 border-indigo-600 text-indigo-600 hover:bg-indigo-50">
               <Link to="/resume">
                 <Eye className="w-5 h-5" />
                 Resume
               </Link>
-            </Button>
+            </Button>*/}
             <Button asChild variant="outline" size="lg" className="gap-2 border-blue-600 text-blue-600 hover:bg-blue-50">
-              <a href="https://www.linkedin.com/in/khouloud-shabou-09543b388/" target="_blank" rel="noreferrer">
+              <a href="https://www.linkedin.com/in/khouloudshabou" target="_blank" rel="noreferrer">
                 <Linkedin className="w-5 h-5" />
                 LinkedIn
               </a>

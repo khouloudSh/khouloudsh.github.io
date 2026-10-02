@@ -55,7 +55,7 @@ export default function ResumePage() {
               <div className="flex items-center gap-2">
                 <Linkedin className="w-4 h-4 text-cyan-600" />
                 <a
-                  href="https://www.linkedin.com/in/khouloud-shabou-09543b388/"
+                  href="https://www.linkedin.com/in/khouloudshabou"
                   target="_blank"
                   rel="noreferrer"
                   className="text-cyan-700 hover:text-cyan-900 transition-colors">

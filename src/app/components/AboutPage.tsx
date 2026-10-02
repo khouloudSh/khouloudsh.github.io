@@ -120,7 +120,7 @@ export default function AboutPage() {
                     </h1>
 
                     <p className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mt-8 leading-relaxed">
-                        I spent 6+ years building software. Now I design it, with the people who use it at the center.
+                        I used to focus on making things work. Now I focus on making them work for people.
                     </p>
                 </div>
             </section>

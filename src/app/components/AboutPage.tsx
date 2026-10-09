@@ -58,11 +58,9 @@ export default function AboutPage() {
             current: true,
         },
         {
-            period: "2026 · In progress",
+            period: "2026",
             title: "Google UX Design Professional Certificate",
             text: "Learning the full UX process through hands-on projects: empathizing with users, defining problems, ideating, prototyping, and testing.",
-            progress: { done: 4, total: 8 },
-            current: true,
         },
         {
             period: "Jan 2026 – Mar 2026",
@@ -219,24 +217,6 @@ export default function AboutPage() {
                                 <h4 className="text-xl font-semibold text-slate-900 mb-1">{step.title}</h4>
                                 <p className="text-slate-600 leading-relaxed">{step.text}</p>
 
-                                {step.progress && (
-                                    <div className="mt-4">
-                                        <div className="flex gap-1.5 max-w-xs">
-                                            {Array.from({ length: step.progress.total }).map((_, i) => (
-                                                <div
-                                                    key={i}
-                                                    className={`h-2 flex-1 rounded-full ${i < step.progress.done
-                                                        ? "bg-gradient-to-r from-teal-500 to-cyan-500"
-                                                        : "bg-slate-200"
-                                                        }`}
-                                                />
-                                            ))}
-                                        </div>
-                                        <p className="mt-2 text-sm text-slate-500">
-                                            {step.progress.done} of {step.progress.total} courses completed
-                                        </p>
-                                    </div>
-                                )}
                             </div>
                         ))}
                     </div>

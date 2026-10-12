@@ -5,6 +5,7 @@ import CaseStudy from "./components/CaseStudy";
 import AboutPage from "./components/AboutPage";
 import ResumePage from "./components/ResumePage";
 
+
 function ScrollToTop() {
   const { pathname } = useLocation();
 

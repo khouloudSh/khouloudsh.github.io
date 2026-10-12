@@ -36,6 +36,15 @@ export default function HomePage() {
         "/images/urbanEscape/Detail.png",
         "/images/urbanEscape/Packages.png",
       ]
+    },
+    {
+      id: "museumApp",
+      title: "Museum App",
+      description: "A mobile app concept for museum visitors. More details coming soon.",
+      tags: ["Mobile Design", "UX Research", "Prototyping"],
+      image: "",
+      screenshots: [],
+      comingSoon: true
     }
   ];
 
@@ -255,7 +264,7 @@ export default function HomePage() {
                 viewport={{ once: true }}
               >
                 <Link to={`/case-study/${project.id}`}>
-                  <Card className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden border-0 bg-white h-full relative cursor-pointer">
+                  <div className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden border-0 bg-white h-full relative cursor-pointer">
                     {/* Decorative Corner Element */}
                     <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-teal-200/50 to-transparent rounded-bl-full z-0" />
 
@@ -278,8 +287,8 @@ export default function HomePage() {
                             >
                               ✨
                             </motion.div>
-                            <h3 className="text-2xl font-bold text-white mb-2">Coming Soon</h3>
-                            <p className="text-slate-300 text-sm">New project in development</p>
+                            <h3 className="text-2xl font-bold text-white mb-2">Work in Progress</h3>
+                            <p className="text-slate-300 text-sm">Case study coming soon</p>
                           </div>
 
                           {/* Animated Background Elements */}
@@ -394,7 +403,7 @@ export default function HomePage() {
                         viewport={{ once: true }}
                       />
                     </CardContent>
-                  </Card>
+                  </div>
                 </Link>
               </motion.div>
             ))}
